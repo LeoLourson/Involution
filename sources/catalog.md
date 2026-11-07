@@ -1,13 +1,19 @@
+<!-- generated; do not edit -->
+
 # Подборка полных текстов
 
-Обновлено 12.10.2026. Работ в подборке: 42. Файл собран командой `python scripts/lit.py catalog` из [papers.json](papers.json); правки вносятся в реестр. Тексты лежат в `output/literature/`, вне Git. Наличие полного текста не означает проверку его теорем. LaTeX-транскрипция сделана моделью по PDF: при расхождении первичен PDF.
+Обновлено 07.11.2026. Работ в подборке: 64. Файл собран командой `python tools/sources/lit.py catalog` из [registry.json](registry.json); правки вносятся в реестр. Тексты лежат в `output/literature/`, вне Git. Наличие полного текста не означает проверку его теорем. LaTeX-транскрипция сделана моделью по PDF: при расхождении первичен PDF.
 
 ## S1. Inverse spectral problems for functional-differential operators with involution
 
 **Авторы:** Natalia P. Bondarenko. **Версия:** arXiv:2107.12209v1.
 [Первичный источник](https://arxiv.org/abs/2107.12209v1); [полный текст](https://arxiv.org/pdf/2107.12209v1); [локальный LaTeX](../output/literature/2107.12209v1.tex); [локальный PDF](../output/literature/2107.12209v1.pdf).
 **Объём:** 16 стр. **Статус:** LaTeX-исходник, PDF; карточка есть.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Редукция к матричной задаче; обратная задача, не теорема о нашей базисности.
+
 **SHA-256:** PDF `9630e04aa47a9b96c6952c7ca2d368c31fcde96a69346996e17506a0bf1a20e6`; исходник arXiv `41a546fdc9e123aa22e92edb114217d14c37814a3d94289560796b9a007efd78`.
 
 ## S2. Basis Properties of Eigenfunctions of Second-Order Differential Operators with Involution
@@ -15,7 +21,11 @@
 **Авторы:** Asylzat Kopzhassarova; Abdizhakhan Sarsenbi. **Версия:** 2012, Article 576843.
 [Первичный источник](https://doi.org/10.1155/2012/576843); [полный текст](https://pdfs.semanticscholar.org/0990/6f9700628fdffdaf59f16f6e86c1b01b8789.pdf); [локальный PDF](../output/literature/Kopzhassarova-2012.pdf).
 **Объём:** 6 стр. **Статус:** PDF; карточка есть.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Явные постоянные модели с отражением; не переменный коэффициент.
+
 **SHA-256:** PDF `4ae3ad3e114b1a7959efb3d79cc3c40676805cd641bef81ae1f08941c35fdade`.
 
 ## S3. Возмущения самосопряженных и нормальных операторов с дискретным спектром / Perturbations of self-adjoint and normal operators with discrete spectrum
@@ -23,7 +33,11 @@
 **Авторы:** А. А. Шкаликов. **Версия:** Успехи матем. наук 71:5(431) (2016), 113–174.
 [Первичный источник](https://doi.org/10.4213/rm9740); [полный текст](https://www.mathnet.ru/php/getFT.phtml?jrnid=rm&paperid=9740&what=fullt&option_lang=rus); [локальный LaTeX](../output/literature/Shkalikov-rm9740.tex); [локальный PDF](../output/literature/Shkalikov-rm9740.pdf).
 **Объём:** 62 стр. **Статус:** LaTeX-транскрипция, PDF; карточка есть.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Обзор теории подчинённых возмущений; теорема 6.6 уточняет теорему Маркуса–Мацаева и служит второй опорой C6. LaTeX распознан по PDF и взят из локального архива пользователя; PDF совпадает с файлом MathNet.
+
 **SHA-256:** PDF `15afffa9dfeebdacf9c189bda2629ec5c3a37e17cb8540bf6dc5a05ad3aecf2d`.
 
 ## S4. Riesz Bases for p-Subordinate Perturbations of Normal Operators
@@ -31,7 +45,11 @@
 **Авторы:** Christian Wyss. **Версия:** arXiv:0906.2631v1.
 [Первичный источник](https://arxiv.org/abs/0906.2631v1); [полный текст](https://arxiv.org/pdf/0906.2631v1); [локальный LaTeX](../output/literature/Wyss-0906.2631v1.tex); [локальный PDF](../output/literature/Wyss-0906.2631v1.pdf).
 **Объём:** 30 стр. **Статус:** LaTeX-исходник, PDF; карточка есть.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Основной абстрактный инструмент для скобок после симметризации.
+
 **SHA-256:** PDF `da1200e514ac66eaddb6c3154fbbaffd8fba23595a6ef475c0be55dbb25c9235`; исходник arXiv `a75f752adb4cd3954dbeafb99f42a4b0d51c7e4ea11b6004be350dae92f62d3c`.
 
 ## S5. On the Bari basis property for even-order differential operators with involution
@@ -39,7 +57,11 @@
 **Авторы:** Dmitry M. Polyakov. **Версия:** Tamkang J. Math. 54(4), 339–351 (2023); online 2022.
 [Первичный источник](https://doi.org/10.5556/j.tkjm.54.2023.4899); [полный текст](https://journals.math.tku.edu.tw/index.php/TKJM/article/download/4899/1711/11817); [локальный PDF](../output/literature/Polyakov-Bari.pdf).
 **Объём:** 13 стр. **Статус:** PDF; карточка есть.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Базисность для отражения старшей производной; порядок строго больше двух, другие условия.
+
 **SHA-256:** PDF `5735b70d0182de35fd57bdc7a34b40349ca97828c995439e9e1dcc9a75e1c706`.
 
 ## S6. On Eigenfunctions of the Boundary Value Problems for Second Order Differential Equations with Involution
@@ -47,7 +69,11 @@
 **Авторы:** Abdissalam Sarsenbi; Abdizhahan Sarsenbi. **Версия:** Symmetry 13(10), 1972 (2021).
 [Первичный источник](https://doi.org/10.3390/sym13101972); [полный текст](https://pdfs.semanticscholar.org/564a/51b028faf6adfad6b2c5aff627db4efe825c.pdf); [локальный PDF](../output/literature/Sarsenbi-2021.pdf).
 **Объём:** 9 стр. **Статус:** PDF; карточка есть.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Постоянная главная часть, функции Грина и равносходимость; условия Дирихле проекта не подменяются.
+
 **SHA-256:** PDF `bfdee4ddb8905cd27cb3d26c5b5022b830c1d4c58a98a0f9b469ae36e742f513`.
 
 ## S7. On the completeness and Riesz basis property of root subspaces of boundary value problems for first order systems and applications
@@ -55,7 +81,11 @@
 **Авторы:** Anton A. Lunyov; Mark M. Malamud. **Версия:** arXiv:1401.2574v1.
 [Первичный источник](https://arxiv.org/abs/1401.2574v1); [полный текст](https://arxiv.org/pdf/1401.2574v1); [локальный LaTeX](../output/literature/1401.2574v1.tex); [локальный PDF](../output/literature/1401.2574v1.pdf).
 **Объём:** 50 стр. **Статус:** LaTeX-исходник, PDF; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Полнота и базис подпространств для систем; преобразование нашей задачи требует отдельной проверки.
+
 **SHA-256:** PDF `6de7411faa03e57f3d73f2d141cdf49514928d35b1504069f83c7eb45861c767`; исходник arXiv `01d321ff008a5b242d12a92543af5a0940c4aab0fb49eb93b95c39282cafc047`.
 
 ## S8. On the Riesz basis property of root vectors system for 2 × 2 Dirac type operators
@@ -63,7 +93,11 @@
 **Авторы:** Anton A. Lunyov; Mark M. Malamud. **Версия:** arXiv:1504.04954v1.
 [Первичный источник](https://arxiv.org/abs/1504.04954v1); [полный текст](https://arxiv.org/pdf/1504.04954v1); [локальный LaTeX](../output/literature/1504.04954v1.tex); [локальный PDF](../output/literature/1504.04954v1.pdf).
 **Объём:** 40 стр. **Статус:** LaTeX-исходник, PDF; карточка есть.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Регулярность и строгая регулярность; условия относятся к системе первого порядка.
+
 **SHA-256:** PDF `37438336aba587bcefd20a42f5b05c35ebfbd2bd4a3739a512e4581e12cfb03d`; исходник arXiv `414e78e0a5beb886374bd40b0683888ef4830a7fdfda1bb7ee3da6ec1098c047`.
 
 ## S9. Stability of spectral characteristics and Bari basis property of boundary value problems for 2 × 2 Dirac type systems
@@ -71,7 +105,11 @@
 **Авторы:** Anton A. Lunyov; Mark M. Malamud. **Версия:** arXiv:2012.11170v1.
 [Первичный источник](https://arxiv.org/abs/2012.11170v1); [полный текст](https://arxiv.org/pdf/2012.11170v1); [локальный LaTeX](../output/literature/2012.11170v1.tex); [локальный PDF](../output/literature/2012.11170v1.pdf).
 **Объём:** 70 стр. **Статус:** LaTeX-исходник, PDF; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Устойчивость спектральных данных; различие базисов Бари и Рисса.
+
 **SHA-256:** PDF `173c23cf04dbf7e59e7aa5107469c8af6fb5b20e0fbecfc3b722c8c711ad3dc8`; исходник arXiv `93cdae145c002992a9b7baf291df23f11ea2f2bd1449d0e8ed7d3d99d868b3f6`.
 
 ## S10. On the completeness of the system of root vectors for first-order systems
@@ -79,7 +117,11 @@
 **Авторы:** Mark M. Malamud; Leonid L. Oridoroga. **Версия:** arXiv:1109.3683v1.
 [Первичный источник](https://arxiv.org/abs/1109.3683v1); [полный текст](https://arxiv.org/pdf/1109.3683v1); [локальный LaTeX](../output/literature/1109.3683v1.tex); [локальный PDF](../output/literature/1109.3683v1.pdf).
 **Объём:** 36 стр. **Статус:** LaTeX-исходник, PDF; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Слабая регулярность краевых условий как механизм полноты.
+
 **SHA-256:** PDF `98b04681d97fe116d3cdbe52d0d62807d4c9f37f699939df5ca87e894f7a4fb1`; исходник arXiv `83851bae3dc768721dc843d7bc66b9ac03e2f5cc045ec42d3686cf58af120e3a`.
 
 ## S11. Local form-subordination condition and Riesz basisness of root systems
@@ -87,7 +129,11 @@
 **Авторы:** Boris Mityagin; Petr Siegl. **Версия:** arXiv:1608.00224v1.
 [Первичный источник](https://arxiv.org/abs/1608.00224v1); [полный текст](https://arxiv.org/pdf/1608.00224v1); [локальный LaTeX](../output/literature/1608.00224v1.tex); [локальный PDF](../output/literature/1608.00224v1.pdf).
 **Объём:** 28 стр. **Статус:** LaTeX-исходник, PDF; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Локальная подчинённость и спектральные зазоры; возможный более сильный инструмент.
+
 **SHA-256:** PDF `d5cef990e6636dd7c0646ff4b205281959be0279b672f20e0b5ad7838d542397`; исходник arXiv `861ce17a76fa17d49c15208b616391f1f168900aa115014dbe7e3b73e996f6f7`.
 
 ## S12. Local form subordination without a power decay and a criterion of Riesz basesness
@@ -95,7 +141,11 @@
 **Авторы:** Boris Mityagin; Petr Siegl. **Версия:** arXiv:2411.10553v1.
 [Первичный источник](https://arxiv.org/abs/2411.10553v1); [полный текст](https://arxiv.org/pdf/2411.10553v1); [локальный LaTeX](../output/literature/2411.10553v1.tex); [локальный PDF](../output/literature/2411.10553v1.pdf).
 **Объём:** 22 стр. **Статус:** LaTeX-исходник, PDF; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Развитие локальной подчинённости; не переносится автоматически на старшую производную.
+
 **SHA-256:** PDF `8dd0b5ce42ee6aed491cfc38f259d5dcaaf55f8ac80dbed0cc7ae1c71eac55ef`; исходник arXiv `25435203b6f0626291f93039f775203880f1c453b06b69df71c04e955ac90dd2`.
 
 ## S13. Criteria for existence of Riesz bases consisting of root functions of Hill and 1D Dirac operators
@@ -103,7 +153,11 @@
 **Авторы:** Plamen Djakov; Boris Mityagin. **Версия:** arXiv:1106.5774v1.
 [Первичный источник](https://arxiv.org/abs/1106.5774v1); [полный текст](https://arxiv.org/pdf/1106.5774v1); [локальный LaTeX](../output/literature/1106.5774v1.tex); [локальный PDF](../output/literature/1106.5774v1.pdf).
 **Объём:** 30 стр. **Статус:** LaTeX-исходник, PDF; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Критерии перехода от двумерных спектральных блоков к отдельным функциям.
+
 **SHA-256:** PDF `540c1d3a238f9502d34e8080587e5c4915c800ab1954bff889e42ba9980da21c`; исходник arXiv `9d72ca6cec0b8df91c3b77a16e4a823abc3a67ada28d54ca1c80749472dc90bf`.
 
 ## S14. Riesz bases consisting of root functions of 1D Dirac operators
@@ -111,7 +165,11 @@
 **Авторы:** Plamen Djakov; Boris Mityagin. **Версия:** arXiv:1108.4225v1.
 [Первичный источник](https://arxiv.org/abs/1108.4225v1); [полный текст](https://arxiv.org/pdf/1108.4225v1); [локальный LaTeX](../output/literature/1108.4225v1.tex); [локальный PDF](../output/literature/1108.4225v1.pdf).
 **Объём:** 15 стр. **Статус:** LaTeX-исходник, PDF; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Критерии обычного базиса внутри спектральных блоков.
+
 **SHA-256:** PDF `2ca6062b9e7f368c0978157fe4f1fede778b4cd44ad70e90180c1d9f9f50b124`; исходник arXiv `06074c1b508524401be6310bec464b2427446f1c2a33b994266b961827d1b7ab`.
 
 ## S15. Riesz basis property of Hill operators with potentials in weighted spaces
@@ -119,7 +177,11 @@
 **Авторы:** Plamen Djakov; Boris Mityagin. **Версия:** arXiv:1403.2973v1.
 [Первичный источник](https://arxiv.org/abs/1403.2973v1); [полный текст](https://arxiv.org/pdf/1403.2973v1); [локальный LaTeX](../output/literature/1403.2973v1.tex); [локальный PDF](../output/literature/1403.2973v1.pdf).
 **Объём:** 29 стр. **Статус:** LaTeX-исходник, PDF; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Сравнительный материал о спектральных зазорах и обусловленности; другой оператор.
+
 **SHA-256:** PDF `d5fb0f7b69af87c2101e69316a7b1420c73b4a6de955f16160825b96bd927c6c`; исходник arXiv `190231944ea2d93f29d626da25960f15711c59c620f0da72f87b61f700d7d886`.
 
 ## S16. Equiconvergence of spectral decompositions of 1D Dirac operators with regular boundary conditions
@@ -127,7 +189,11 @@
 **Авторы:** Plamen Djakov; Boris Mityagin. **Версия:** arXiv:1108.0344v1.
 [Первичный источник](https://arxiv.org/abs/1108.0344v1); [полный текст](https://arxiv.org/pdf/1108.0344v1); [локальный LaTeX](../output/literature/1108.0344v1.tex); [локальный PDF](../output/literature/1108.0344v1.pdf).
 **Объём:** 53 стр. **Статус:** LaTeX-исходник, PDF; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Регулярность, строгая регулярность и сходимость спектральных разложений.
+
 **SHA-256:** PDF `d60a5ff98681ff8699257ed68be74df62284fbdb4e171798fb4218be2871bea4`; исходник arXiv `d3cb5c75a972f673e37600ca6643db81da4520988b92b7993eec7b71f7f15747`.
 
 ## S17. Bari-Markus property for Riesz projections of 1D periodic Dirac operators
@@ -135,7 +201,11 @@
 **Авторы:** Plamen Djakov; Boris Mityagin. **Версия:** arXiv:0901.0856v1.
 [Первичный источник](https://arxiv.org/abs/0901.0856v1); [полный текст](https://arxiv.org/pdf/0901.0856v1); [локальный LaTeX](../output/literature/0901.0856v1.tex); [локальный PDF](../output/literature/0901.0856v1.pdf).
 **Объём:** 23 стр. **Статус:** LaTeX-исходник, PDF; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Контроль разностей проекторов; механизм базиса подпространств.
+
 **SHA-256:** PDF `ba66423d47b65675c64b713b756799690631decf9532f08c90c26ff84a077468`; исходник arXiv `09a468b582bb68c38ba9e67494e22622ff072b3346ee588757659e2c0c17de3d`.
 
 ## S18. Bari-Markus property for Riesz projections of Hill operators with singular potentials
@@ -143,7 +213,11 @@
 **Авторы:** Plamen Djakov; Boris Mityagin. **Версия:** arXiv:0803.3170v1.
 [Первичный источник](https://arxiv.org/abs/0803.3170v1); [полный текст](https://arxiv.org/pdf/0803.3170v1); [локальный LaTeX](../output/literature/0803.3170v1.tex); [локальный PDF](../output/literature/0803.3170v1.pdf).
 **Объём:** 20 стр. **Статус:** LaTeX-исходник, PDF; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Контроль спектральных проекторов второго порядка.
+
 **SHA-256:** PDF `783daccddf94f903339e3fecc0f458fbaf5ffeb3475dceb2cf03373f2d49d388`; исходник arXiv `75473fa3d101a62014860630e53edb1e78b650fa3784bd649ae0f212984f99b1`.
 
 ## S19. Riesz basis for strongly continuous groups
@@ -151,7 +225,11 @@
 **Авторы:** Hans Zwart. **Версия:** arXiv:0808.3447v1.
 [Первичный источник](https://arxiv.org/abs/0808.3447v1); [полный текст](https://arxiv.org/pdf/0808.3447v1); [локальный LaTeX](../output/literature/0808.3447v1.tex); [локальный PDF](../output/literature/0808.3447v1.pdf).
 **Объём:** 8 стр. **Статус:** LaTeX-исходник, PDF; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Полнота, зазоры и группы операторов; одна отделённость спектра без остальных условий недостаточна.
+
 **SHA-256:** PDF `91dd42ba731bf4ca1280c3834d49bc14919f530fa2480a39ef72435b97eafaf0`; исходник arXiv `657f08c6a9946db9c100278f83bdb3276dd1e31f2fa111ad429eb3b0645f317f`.
 
 ## S20. Eigenvalue Asymptotics of Perturbed Self-adjoint Operators
@@ -159,7 +237,11 @@
 **Авторы:** A. A. Shkalikov. **Версия:** arXiv:1202.5204v1.
 [Первичный источник](https://arxiv.org/abs/1202.5204v1); [полный текст](https://arxiv.org/pdf/1202.5204v1); [локальный LaTeX](../output/literature/1202.5204v1.tex); [локальный PDF](../output/literature/1202.5204v1.pdf).
 **Объём:** 12 стр. **Статус:** LaTeX-исходник, PDF; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Счётная функция и локальная подчинённость; вспомогательный контекст для кластеризации.
+
 **SHA-256:** PDF `911b5575c73aca8254ec7e4b00713cd1d672b4d8f1712448975e5d3df7292d99`; исходник arXiv `a1342b8979e2cdc07412208130076505bcca67c15b740ad7785ec17bad409843`.
 
 ## S21. On the Riesz Basis Property of the Eigen- and Associated Functions of Periodic and Antiperiodic Sturm-Liouville Problems
@@ -167,7 +249,11 @@
 **Авторы:** A. A. Shkalikov; O. A. Veliev. **Версия:** arXiv:0811.2337v1.
 [Первичный источник](https://arxiv.org/abs/0811.2337v1); [полный текст](https://arxiv.org/pdf/0811.2337v1); [локальный LaTeX](../output/literature/0811.2337v1.tex); [локальный PDF](../output/literature/0811.2337v1.pdf).
 **Объём:** 16 стр. **Статус:** LaTeX-исходник, PDF; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Сравнение обычного базиса и базиса со скобками; иной тип краевых условий.
+
 **SHA-256:** PDF `264a2ad65b7a0a9242cb4bcd51e50f01bf2b8113d622f639e337abdbb91cf7a5`; исходник arXiv `66c9dc89b3b8eb66df381e46158aea02de84be6124c6663df2a2b66bb0eeefe9`.
 
 ## S22. Semi-classical States for Non-self-adjoint Schrodinger Operators
@@ -175,7 +261,11 @@
 **Авторы:** E B Davies. **Версия:** arXiv:math/9803129v1.
 [Первичный источник](https://arxiv.org/abs/math/9803129v1); [полный текст](https://arxiv.org/pdf/math/9803129v1); [локальный LaTeX](../output/literature/math-9803129v1.tex).
 **Статус:** LaTeX-исходник; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Метод: квазимоды (псевдомоды) несамосопряжённых операторов Шрёдингера и условие на скобку Пуассона; опора для I9 и I16. У нас комплексный множитель при старшей производной, а не комплексный потенциал.
+
 **SHA-256:** исходник arXiv `07536c07fd0024a3c878a6153bb23e19beff62db3b4d61e8c9f6422f855321b8`.
 
 ## S23. Pseudospectra of semi-classical (pseudo)differential operators
@@ -183,7 +273,11 @@
 **Авторы:** Nils Dencker; Johannes Sjoestrand; Maciej Zworski. **Версия:** arXiv:math/0301242v1.
 [Первичный источник](https://arxiv.org/abs/math/0301242v1); [полный текст](https://arxiv.org/pdf/math/0301242v1); [локальный LaTeX](../output/literature/math-0301242v1.tex).
 **Статус:** LaTeX-исходник; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Метод: квазимоды (псевдомоды) несамосопряжённых операторов Шрёдингера и условие на скобку Пуассона; опора для I9 и I16. У нас комплексный множитель при старшей производной, а не комплексный потенциал.
+
 **SHA-256:** исходник arXiv `69b778236ee1226b482f9b40265ca109b506fe9d46b424a4ed524cc2e55cefe5`.
 
 ## S24. Pseudomodes for Schroedinger operators with complex potentials
@@ -191,7 +285,11 @@
 **Авторы:** David Krejcirik; Petr Siegl. **Версия:** arXiv:1705.01894v2.
 [Первичный источник](https://arxiv.org/abs/1705.01894v2); [полный текст](https://arxiv.org/pdf/1705.01894v2); [локальный LaTeX](../output/literature/1705.01894v2.tex).
 **Статус:** LaTeX-исходник; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Метод: квазимоды (псевдомоды) несамосопряжённых операторов Шрёдингера и условие на скобку Пуассона; опора для I9 и I16. У нас комплексный множитель при старшей производной, а не комплексный потенциал.
+
 **SHA-256:** исходник arXiv `62973a57f45ccde64fcd6179ddec7dc43445c1eb2ba7695268c1d8994abbeaec`.
 
 ## S25. The Complex Airy Operator as Explicitly Solvable PT-symmetrical Model
@@ -199,7 +297,11 @@
 **Авторы:** A. A. Shkalikov; S. N. Tumanov. **Версия:** arXiv:2112.03743v1.
 [Первичный источник](https://arxiv.org/abs/2112.03743v1); [полный текст](https://arxiv.org/pdf/2112.03743v1); [локальный LaTeX](../output/literature/2112.03743v1.tex).
 **Статус:** LaTeX-исходник; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Образцы: несамосопряжённые операторы второго порядка с полной системой корневых функций без базиса Рисса, рост норм спектральных проекторов и резольвенты (комплексный оператор Эйри на [-1,1] и на полуоси, ангармонический осциллятор). Объект другой; берётся схема доказательства отсутствия базиса.
+
 **SHA-256:** исходник arXiv `3902638b815ac7dd7a6072e86c7f68e32d76f6499741fe819232959c5ccc2ab9`.
 
 ## S26. Spectral projections of an anharmonic oscillator with complex polynomial potential
@@ -207,7 +309,11 @@
 **Авторы:** Boris Mityagin; Petr Siegl. **Версия:** arXiv:2601.09800v1.
 [Первичный источник](https://arxiv.org/abs/2601.09800v1); [полный текст](https://arxiv.org/pdf/2601.09800v1); [локальный LaTeX](../output/literature/2601.09800v1.tex).
 **Статус:** LaTeX-исходник; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Образцы: несамосопряжённые операторы второго порядка с полной системой корневых функций без базиса Рисса, рост норм спектральных проекторов и резольвенты (комплексный оператор Эйри на [-1,1] и на полуоси, ангармонический осциллятор). Объект другой; берётся схема доказательства отсутствия базиса.
+
 **SHA-256:** исходник arXiv `7cce3ed9c95f0c7a49e994c179d29168979da6f62abd477f6f2c28bc0baa4f52`.
 
 ## S27. Generalised Airy Operators
@@ -215,7 +321,11 @@
 **Авторы:** Antonio Arnal; Petr Siegl. **Версия:** arXiv:2208.14389v2.
 [Первичный источник](https://arxiv.org/abs/2208.14389v2); [полный текст](https://arxiv.org/pdf/2208.14389v2); [локальный LaTeX](../output/literature/2208.14389v2.tex).
 **Статус:** LaTeX-исходник; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Образцы: несамосопряжённые операторы второго порядка с полной системой корневых функций без базиса Рисса, рост норм спектральных проекторов и резольвенты (комплексный оператор Эйри на [-1,1] и на полуоси, ангармонический осциллятор). Объект другой; берётся схема доказательства отсутствия базиса.
+
 **SHA-256:** исходник arXiv `400c80a366be0d51bdcc7b92aa1144a72e6a845213abea66bbe97792cc096088`.
 
 ## S28. Spectral properties of complex Airy operator on the semi-axis
@@ -223,7 +333,11 @@
 **Авторы:** Artem Savchuk; Andrei Shkalikov. **Версия:** arXiv:1702.00627v1.
 [Первичный источник](https://arxiv.org/abs/1702.00627v1); [полный текст](https://arxiv.org/pdf/1702.00627v1); [локальный LaTeX](../output/literature/1702.00627v1.tex).
 **Статус:** LaTeX-исходник; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Образцы: несамосопряжённые операторы второго порядка с полной системой корневых функций без базиса Рисса, рост норм спектральных проекторов и резольвенты (комплексный оператор Эйри на [-1,1] и на полуоси, ангармонический осциллятор). Объект другой; берётся схема доказательства отсутствия базиса.
+
 **SHA-256:** исходник arXiv `3c249944e7addfcc1fcfbb4071ebe87007c578400bd4173f0565ae5aa58f82b8`.
 
 ## S29. Riesz property in the case of multiple eigenvalues
@@ -231,7 +345,11 @@
 **Авторы:** Boris Mityagin; Petr Siegl. **Версия:** arXiv:2605.04659v1.
 [Первичный источник](https://arxiv.org/abs/2605.04659v1); [полный текст](https://arxiv.org/pdf/2605.04659v1); [локальный LaTeX](../output/literature/2605.04659v1.tex).
 **Статус:** LaTeX-исходник; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Свойство Рисса спектральных проекторов при кратных собственных значениях для несимметричных возмущений самосопряжённых операторов; кандидат в опоры для S-SPLIT (две сближающиеся серии).
+
 **SHA-256:** исходник arXiv `7727de9c19c458399c30dc3eedfc49cd6cea9525234aed145ab8933875c8bc8f`.
 
 ## S30. Liouville-Green expansions of exponential form, with an application to modified Bessel functions
@@ -239,7 +357,11 @@
 **Авторы:** T. M. Dunster. **Версия:** arXiv:1708.00548v1.
 [Первичный источник](https://arxiv.org/abs/1708.00548v1); [полный текст](https://arxiv.org/pdf/1708.00548v1); [локальный LaTeX](../output/literature/1708.00548v1.tex).
 **Статус:** LaTeX-исходник; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Разложения Лиувилля–Грина с оценками остатка для модифицированных функций Бесселя комплексного аргумента; опора для оценки K_0, K_1 в секторе (I16, шаг 2).
+
 **SHA-256:** исходник arXiv `ff4618384e2f90d1677f23cbc007b7c089d5f6fb4733b7c36cdc05f1ea6f9018`.
 
 ## S31. Root System of a Perturbation of a Selfadjoint Operator with Discrete Spectrum
@@ -247,7 +369,11 @@
 **Авторы:** James Adduci; Boris Mityagin. **Версия:** arXiv:1104.0915v1.
 [Первичный источник](https://arxiv.org/abs/1104.0915v1); [полный текст](https://arxiv.org/pdf/1104.0915v1); [локальный LaTeX](../output/literature/1104.0915v1.tex).
 **Статус:** LaTeX-исходник; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Полнота и базисность корневых систем возмущений самосопряжённых операторов с дискретным спектром, диссипативные задачи, классы Шаттена через вещественную часть обратного; опоры для полноты в C17 и I17.
+
 **SHA-256:** исходник arXiv `a90381cbf06d4875f83c18fe6572fc2dcc30b938acdc86149d2f4a4440615b9b`.
 
 ## S32. The Damped String Problem Revisited
@@ -255,7 +381,11 @@
 **Авторы:** Fritz Gesztesy; Helge Holden. **Версия:** arXiv:1009.1858v1.
 [Первичный источник](https://arxiv.org/abs/1009.1858v1); [полный текст](https://arxiv.org/pdf/1009.1858v1); [локальный LaTeX](../output/literature/1009.1858v1.tex).
 **Статус:** LaTeX-исходник; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Полнота и базисность корневых систем возмущений самосопряжённых операторов с дискретным спектром, диссипативные задачи, классы Шаттена через вещественную часть обратного; опоры для полноты в C17 и I17.
+
 **SHA-256:** исходник arXiv `7083f9e1c751750310de2bb0eae71bfb338e3c2c096f9b24b2dbe312df21d961`.
 
 ## S33. Schatten index of the operator via the real component of its inverse
@@ -263,7 +393,11 @@
 **Авторы:** Maksim V. Kukushkin. **Версия:** arXiv:2401.08650v1.
 [Первичный источник](https://arxiv.org/abs/2401.08650v1); [полный текст](https://arxiv.org/pdf/2401.08650v1); [локальный LaTeX](../output/literature/2401.08650v1.tex).
 **Статус:** LaTeX-исходник; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Полнота и базисность корневых систем возмущений самосопряжённых операторов с дискретным спектром, диссипативные задачи, классы Шаттена через вещественную часть обратного; опоры для полноты в C17 и I17.
+
 **SHA-256:** исходник arXiv `fd1b38a3a9eeccc318f56e3cc32065cd71b4ae48f644e5a39ea8c8d0fa8b8175`.
 
 ## S34. Spectral Problem for a Differential Operator with Involution
@@ -271,7 +405,32 @@
 **Авторы:** A. A. Shkalikov. **Версия:** Proceedings of the Steklov Institute of Mathematics, 331 (1), 284-296 (2025).
 [Первичный источник](https://doi.org/10.1134/S0081543825601431); [локальный LaTeX](../output/literature/S34.tex); [локальный PDF](../output/literature/S34.pdf).
 **Объём:** 20 стр. **Статус:** LaTeX-транскрипция, PDF; теоремы не проверены.
-**Связь с проектом:** Тот же объект: спектральная задача для дифференциального оператора с инволюцией (Шкаликов; Гранильщикова и Шкаликов), достаточные условия безусловной базисности. Постановку, класс коэффициентов и пересечение с C5, C6, C18 нужно сверить по полному тексту.
+
+**О чём** (статья; описано 07.11.2026, основание — полный текст): Спектральная задача L(y)=alpha(x)y'(x)+y'(-x)+q(x)y(x)+r(x)y(-x)=lambda y на [-1,1] с одним условием y(-1)-h y(1)=0; alpha вещественная из W_2^1 или AC, q и r из L_2 или L_1, h комплексно; регулярность — условие (18) на коэффициенты главных экспонент.
+
+**Результаты:**
+
+- Теорема 1, с. 3: при регулярной задаче lambda_k=mu_k+O(1), k=0,±1,±2,..., и корневые функции образуют базис Рисса в L_2(-1,1).
+- Теорема 2, с. 3: при alpha из AC[-1,1] и q,r из L_1 регулярная задача также даёт базис Рисса.
+
+
+**Методы:**
+
+- метод теории возмущений
+- асимптотическая теория систем ОДУ со спектральным параметром
+- сведение к системе первого порядка
+
+
+**Связанные источники:**
+
+- S35 — тот же объект, безусловная базисность
+- S50 — регулярность для систем первого порядка
+- S48 — регулярность для операторов JP+Q
+
+**Ключевые слова:** инволюция, первый порядок, регулярность, базис Рисса, асимптотика.
+
+**Связь с проектом:** Первый порядок с переменным alpha(x) при y'(x) и одним условием y(-1)=h y(1): регулярность (18), асимптотика lambda_k=mu_k+O(1) и базис Рисса; случай равных порядков сюда не входит.
+
 **SHA-256:** PDF `edb8973433420fc8a9f01088e6de96e6e74d172837486b335c8e27aca9822fb0`.
 
 ## S35. Spectral Properties of a Differential Operator with Involution
@@ -279,7 +438,32 @@
 **Авторы:** Ya. A. Granilshchikova; A. A. Shkalikov. **Версия:** Moscow University Mathematics Bulletin, 77 (4), 204-208 (2022).
 [Первичный источник](https://doi.org/10.3103/S0027132222040040); [локальный LaTeX](../output/literature/S35.tex); [локальный PDF](../output/literature/S35.pdf).
 **Объём:** 5 стр. **Статус:** LaTeX-транскрипция, PDF; теоремы не проверены.
-**Связь с проектом:** Тот же объект: спектральная задача для дифференциального оператора с инволюцией (Шкаликов; Гранильщикова и Шкаликов), достаточные условия безусловной базисности. Постановку, класс коэффициентов и пересечение с C5, C6, C18 нужно сверить по полному тексту.
+
+**О чём** (статья; описано 07.11.2026, основание — полный текст): Спектральная задача для оператора alpha(x)y'(x)+y'(-x)+g(x)y(x)+r(x)y(-x) на [-1,1] с одним краевым условием y(-1)=h y(1); alpha вещественная, |alpha(x)| не равно 1, при |alpha(x)|<1 требуется чётность alpha.
+
+**Результаты:**
+
+- Теорема 1, с. 69: при условии регулярности (11) собственные функции задачи (9) образуют безусловный базис L_2[-1,1].
+- Теорема 2, с. 70: то же для задачи (3) с существенно ограниченными g и r.
+
+
+**Методы:**
+
+- метод подобных операторов
+- абстрактная теория возмущений
+- оценки оператора умножения на экспоненту
+
+
+**Связанные источники:**
+
+- S34 — тот же объект, асимптотика и базис Рисса
+- S50 — регулярность для систем первого порядка
+- S48 — регулярность для операторов JP+Q
+
+**Ключевые слова:** инволюция, первый порядок, безусловный базис, регулярность.
+
+**Связь с проектом:** Первый порядок с переменным alpha(x) и одним условием y(-1)=h y(1): достаточные условия безусловной базисности; асимптотик собственных функций нет.
+
 **SHA-256:** PDF `5ae5aee97d48ff2ee395373de5b7205a1f4fd315dcd3b2747e8c34a6c5c4bcce`.
 
 ## S36. Riesz basis property of system of root functions of second-order differential operator with involution
@@ -287,20 +471,63 @@
 **Авторы:** L. V. Kritskov; A. M. Sarsenbi. **Версия:** Differential Equations, 53 (1), 33-46 (2017).
 [Первичный источник](https://doi.org/10.1134/S0012266117010049).
 **Статус:** Полного текста нет; теоремы не проверены.
-**Связь с проектом:** Базис Рисса (в том числе со скобками) из корневых функций оператора второго порядка с инволюцией в старшей производной: постоянный коэффициент, младшие члены, интегральные условия. У нас переменный коэффициент a(x) при y''(-x).
+
+**О чём** (статья; описано 07.11.2026, основание — аннотация): Оператор Lu=-u''(x)+alpha u''(-x)+q(x)u(x)+q_nu(x)u(nu(x)) в L_2(-1,1), alpha из (-1,1), nu — абсолютно непрерывная инволюция отрезка, q и q_nu суммируемы.
+
+**Результаты:**
+
+- Аннотация: получены необходимые и достаточные условия безусловной базисности системы корневых функций оператора.
+
+
+**Методы:**
+
+- полного текста нет; по аннотации метод не установлен
+
+
+**Связанные источники:**
+
+- S2 — второй порядок с инволюцией в старшей части
+- S58 — нелокальная задача с инволюцией
+
+**Ключевые слова:** инволюция, корневые функции, безусловная базисность, суммируемые потенциалы.
+
+**Связь с проектом:** Необходимые и достаточные условия безусловной базисности корневых функций оператора второго порядка с инволюцией в старшей части, постоянным alpha и суммируемыми потенциалами; полного текста нет.
 
 ## S37. Spectral Properties of Non‐Self‐Adjoint Perturbations for a Spectral Problem with Involution
 
 **Авторы:** Asylzat A. Kopzhassarova; Alexey L. Lukashov; Abdizhakhan M. Sarsenbi. **Версия:** Abstract and Applied Analysis, 2012 (1) (2012).
 [Первичный источник](https://doi.org/10.1155/2012/590781).
 **Статус:** Полного текста нет; теоремы не проверены.
-**Связь с проектом:** Базис Рисса (в том числе со скобками) из корневых функций оператора второго порядка с инволюцией в старшей производной: постоянный коэффициент, младшие члены, интегральные условия. У нас переменный коэффициент a(x) при y''(-x).
+
+**О чём** (статья; описано 07.11.2026, основание — аннотация): Краевые задачи для дифференциальных уравнений первого порядка с инволюцией; изучается свойство базисности Рисса собственных функций (по аннотации Hindawi).
+
+**Результаты:**
+
+- Аннотация: дано полное описание свойства базисности Рисса для собственных функций краевых задач первого порядка с инволюцией.
+
+
+**Методы:**
+
+- полного текста нет; метод по аннотации не установлен
+
+
+**Связанные источники:**
+
+- S35 — первый порядок с инволюцией и одним краевым условием
+- S34 — первый порядок с переменным коэффициентом
+
+**Ключевые слова:** инволюция, первый порядок, базис Рисса, краевые задачи.
+
+**Связь с проектом:** Базисность Рисса для краевых задач первого порядка с инволюцией (по аннотации); ранее в реестре ошибочно отнесена ко второму порядку.
 
 ## S38. On Riescz Bases of Eigenfunction of 2-nd Order Differential Operator with Involution and Integral Boundary Conditions
 
-**Авторы:** ; V. P. Kurdyumov. **Версия:** Izvestiya of Saratov University. New Series. Series: Mathematics. Mechanics. Informatics, 15 (4), 392-405 (2015).
+**Авторы:** V. P. Kurdyumov. **Версия:** Izvestiya of Saratov University. New Series. Series: Mathematics. Mechanics. Informatics, 15 (4), 392-405 (2015).
 [Первичный источник](https://doi.org/10.18500/1816-9791-2015-15-4-392-405).
 **Статус:** Полного текста нет; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Базис Рисса (в том числе со скобками) из корневых функций оператора второго порядка с инволюцией в старшей производной: постоянный коэффициент, младшие члены, интегральные условия. У нас переменный коэффициент a(x) при y''(-x).
 
 ## S39. ON THE COMPLETENESS OF THE EIGENFUNCTIONS OF SOME CLASSES OF NON-SELFADJOINT LINEAR OPERATORS
@@ -308,7 +535,11 @@
 **Авторы:** M V Keldysh. **Версия:** Russian Mathematical Surveys, 26 (4), 15-44 (1971).
 [Первичный источник](https://doi.org/10.1070/RM1971v026n04ABEH003985); [локальный LaTeX](../output/literature/S39.tex); [локальный PDF](../output/literature/S39.pdf).
 **Объём:** 28 стр. **Статус:** LaTeX-транскрипция, PDF; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Теоремы о полноте: Келдыш (операторы вида (I+S)H) и Мацаев–Могульский (слабые возмущения самосопряжённых операторов); возможная замена теоремы 4.7 из S3 в C17 и I17.
+
 **SHA-256:** PDF `681dd88644010a7fcdcb04319199533f762db6081ae7cca995515b1c9ab7641e`.
 
 ## S40. Completeness of weak perturbations of self-adjoint operators
@@ -316,6 +547,9 @@
 **Авторы:** V. I. Matsaev; E. Z. Mogul'skii. **Версия:** Journal of Soviet Mathematics, 14 (2), 1091-1103 (1980).
 [Первичный источник](https://doi.org/10.1007/BF01562051).
 **Статус:** Полного текста нет; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Теоремы о полноте: Келдыш (операторы вида (I+S)H) и Мацаев–Могульский (слабые возмущения самосопряжённых операторов); возможная замена теоремы 4.7 из S3 в C17 и I17.
 
 ## S41. SPECTRAL ASYMPTOTICS OF THE NON-SELF-ADJOINT HARMONIC OSCILLATOR
@@ -323,6 +557,9 @@
 **Авторы:** E. B. DAVIES; A. B. J. KUIJLAARS. **Версия:** Journal of the London Mathematical Society, 70 (02), 420-426 (2004).
 [Первичный источник](https://doi.org/10.1112/S0024610704005381).
 **Статус:** Полного текста нет; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Рост норм спектральных проекторов несамосопряжённого осциллятора (Davies, Kuijlaars) и обзор свойства базиса Рисса для индефинитных задач Штурма–Лиувилля на [-1,1] (Binding, Fleige); сравнение с весом 1/(1+ia) из C4.
 
 ## S42. A review of a Riesz basis property for indefinite Sturm-Liouville problems
@@ -330,4 +567,575 @@
 **Авторы:** Paul A. Binding; Andreas Fleige. **Версия:** Operators and Matrices, (4), 735-755 (2011).
 [Первичный источник](https://doi.org/10.7153/oam-05-52).
 **Статус:** Полного текста нет; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
 **Связь с проектом:** Рост норм спектральных проекторов несамосопряжённого осциллятора (Davies, Kuijlaars) и обзор свойства базиса Рисса для индефинитных задач Штурма–Лиувилля на [-1,1] (Binding, Fleige); сравнение с весом 1/(1+ia) из C4.
+
+## S43. Eigenvalue asymptotics for Sturm--Liouville operators with singular potentials
+
+**Авторы:** Rostyslav O. Hryniv; Yaroslav V. Mykytyuk. **Версия:** arXiv:math/0407252v2.
+[Первичный источник](https://arxiv.org/abs/math/0407252v2); [полный текст](https://arxiv.org/pdf/math/0407252v2); [локальный LaTeX](../output/literature/math-0407252v2.tex); [локальный PDF](../output/literature/math-0407252v2.pdf).
+**Объём:** 25 стр. **Статус:** LaTeX-исходник, PDF; карточка есть.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
+**Связь с проектом:** Асимптотика собственных значений (и собственных функций у Савчука–Шкаликова) оператора Штурма–Лиувилля с условиями Дирихле на отрезке и комплексным сингулярным потенциалом; для I19 нужен частный случай ограниченного аналитического потенциала. Оператор без отражения.
+
+**SHA-256:** PDF `989283d211ad5382a21685504933f560fa937bc7c6038d325940f14c7fcf8597`; исходник arXiv `9bf27e9f5dcae7f95300f9dafb90c6fec8a2d77596703de2cb1305ce521e9783`.
+
+## S44. Sturm-Liouville operators with distributional potentials
+
+**Авторы:** A. M. Savchuk; A. A. Shkalikov. **Версия:** arXiv:math/0301077v1.
+[Первичный источник](https://arxiv.org/abs/math/0301077v1); [полный текст](https://arxiv.org/pdf/math/0301077v1); [локальный LaTeX](../output/literature/math-0301077v1.tex).
+**Статус:** LaTeX-исходник; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
+**Связь с проектом:** Асимптотика собственных значений (и собственных функций у Савчука–Шкаликова) оператора Штурма–Лиувилля с условиями Дирихле на отрезке и комплексным сингулярным потенциалом; для I19 нужен частный случай ограниченного аналитического потенциала. Оператор без отражения.
+
+**SHA-256:** исходник arXiv `69c30fe390b28c0477dfdf4516a75b6653630a93b488f1792c7c0b46d327483b`.
+
+## S45. Spectral gaps of Schrödinger operators with periodic singular potentials
+
+**Авторы:** Plamen Djakov; Boris Mityagin. **Версия:** arXiv:0903.5210v1.
+[Первичный источник](https://arxiv.org/abs/0903.5210v1); [полный текст](https://arxiv.org/pdf/0903.5210v1); [локальный LaTeX](../output/literature/0903.5210v1.tex).
+**Статус:** LaTeX-исходник; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
+**Связь с проектом:** Локализация спектра Дирихле для комплексного потенциала: при больших n в круге около n^2 одно простое собственное значение, вне кругов конечное число (Djakov–Mityagin, первичный источник леммы из S15; Makin — общие двухточечные условия). Для I19: простота и счёт собственных значений. Оператор без отражения.
+
+**SHA-256:** исходник arXiv `b743c31177ed628eb4d9f34a5c77f8a7f369a901bfea4259e969fd94b51efc13`.
+
+## S46. On two-point boundary value problems for the Sturm-Liouville operator
+
+**Авторы:** Alexander Makin. **Версия:** arXiv:1512.06584v1.
+[Первичный источник](https://arxiv.org/abs/1512.06584v1); [полный текст](https://arxiv.org/pdf/1512.06584v1); [локальный LaTeX](../output/literature/1512.06584v1.tex).
+**Статус:** LaTeX-исходник; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
+**Связь с проектом:** Локализация спектра Дирихле для комплексного потенциала: при больших n в круге около n^2 одно простое собственное значение, вне кругов конечное число (Djakov–Mityagin, первичный источник леммы из S15; Makin — общие двухточечные условия). Для I19: простота и счёт собственных значений. Оператор без отражения.
+
+**SHA-256:** исходник arXiv `43f5fbddf6ae5483785ae6ec9961287f44e92c49346efd1f03f3c82dcad0e14f`.
+
+## S47. Fourier method for one dimensional Schrödinger operators with singular periodic potentials
+
+**Авторы:** Plamen Djakov; Boris Mityagin. **Версия:** arXiv:0710.0237v1.
+[Первичный источник](https://arxiv.org/abs/0710.0237v1); [полный текст](https://arxiv.org/pdf/0710.0237v1); [локальный LaTeX](../output/literature/0710.0237v1.tex); [локальный PDF](../output/literature/0710.0237v1.pdf).
+**Объём:** 39 стр. **Статус:** LaTeX-исходник, PDF; карточка есть.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
+**Связь с проектом:** Первичный источник теоремы о локализации спектра (теорема 21): для комплексного периодического потенциала из H^{-1}_loc спектр Дирихле на [0,π] дискретен, в каждом круге |λ−n²|<n/4 при n>N одно собственное значение с учётом алгебраической кратности. Для I19: простота и счёт. Оператор без отражения.
+
+**SHA-256:** PDF `3f9156b19246e16ed7af483dee46b54a4ecdde0bc6719c6800868dc116ca24a5`; исходник arXiv `b45581df731e14764da5f4228639c3bf1f23ae78413e4d6597a605fb19a82adf`.
+
+## S48. Регулярные обыкновенные дифференциальные операторы с инволюцией / Regular Ordinary Differential Operators with Involution
+
+**Авторы:** В. Е. Владыкина; А. А. Шкаликов. **Версия:** Матем. заметки, 106:5 (2019), 643–659.
+[Первичный источник](https://www.mathnet.ru/rus/mzm12557); [полный текст](https://www.mathnet.ru/php/getFT.phtml?jrnid=mzm&paperid=12557&what=fullt&option_lang=rus); [локальный PDF](../output/literature/mzm12557.pdf).
+**Объём:** 17 стр. **Статус:** PDF; теоремы не проверены.
+
+**О чём** (статья; описано 25.10.2026, основание — аннотация, введение и формулировки): Операторы Py(x)+Qy(-x) на [-1,1] с общими двухточечными краевыми условиями, порядки n и m дифференциальных выражений P и Q; основной случай n>m.
+
+**Результаты:**
+
+- Определения 1, 2: регулярность краевых условий через числа F1, F2 и через регулярность по Биркгофу для T2(y)=y^(2n) после складывания.
+- Теорема 4: при условиях, регулярных по Биркгофу для Q0y=y^(m), корневые функции образуют безусловный базис со скобками.
+- Теорема 5: второй порядок, условия Дирихле, J24≠0 или (−ia+b)(ia+b)≠0 — безусловный базис со скобками.
+- Случай n=m, в который попадает L_a, в работе не рассмотрен: «требует особого подхода, ему будет посвящена отдельная работа» (стр. файла 2).
+
+
+**Методы:**
+
+- складывание в систему на [0,1]
+- регулярность по Биркгофу
+- теория возмущений
+
+
+**Связанные источники:**
+
+- S5
+- S6
+- S8
+
+**Ключевые слова:** инволюция, регулярные краевые условия, базис со скобками, Биркгоф.
+
+**Связь с проектом:** Регулярность обыкновенных операторов с инволюцией (Владыкина–Шкаликов): определение регулярности для задач с отражением аргумента; сравнить с идеями I32, I37, I39, I40.
+
+**SHA-256:** PDF `57ddcbca6efd7cb566cf04d324f537a29628e52600acbc49ecfe92655eeaa7b6`.
+
+## S49. Spectral Asymptotics of Two-Term Even Order Operators with Involution
+
+**Авторы:** D. M. Polyakov. **Версия:** Journal of Mathematical Sciences, 260 (6), 806-819 (2022).
+[Первичный источник](https://doi.org/10.1007/s10958-022-05729-8).
+**Статус:** Полного текста нет; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
+**Связь с проектом:** Асимптотика спектра двучленных операторов чётного порядка с инволюцией (Поляков): кандидат в главную часть асимптотики для идей I37, I40.
+
+## S50. Регулярные спектральные задачи гиперболического типа для системы / Regular Spectral Problems of Hyperbolic Type for a System of First-Order Ordinary Differential Equations
+
+**Авторы:** А. А. Шкаликов. **Версия:** Матем. заметки, 110:5 (2021), 796–800.
+[Первичный источник](https://www.mathnet.ru/rus/mzm13285); [полный текст](https://www.mathnet.ru/php/getFT.phtml?jrnid=mzm&paperid=13285&what=fullt&option_lang=rus); [локальный PDF](../output/literature/mzm13285.pdf).
+**Объём:** 5 стр. **Статус:** PDF; карточка есть.
+
+**О чём** (статья; описано 25.10.2026, основание — полный текст): Краткое сообщение: системы y'−A(x)y=λB(x)y на [0,1] с условиями U0y(0)+U1y(1)=0; B(x) абсолютно непрерывна с n различными вещественными ненулевыми собственными значениями (гиперболичность), A∈L1.
+
+**Результаты:**
+
+- Теорема 1: при диагональной B и условии (4) в полуплоскостях Re λ≥h и Re λ≤h есть ФСР M(x)(I+R)E(x,λ), R→0 равномерно; переменные b_j(x) без условия коллинеарности.
+- Определение: регулярность — коэффициенты c0, c1 при крайних показателях J0, J1 квазиполинома Δ0 упрощённой задачи (A заменена её диагональю) отличны от нуля; сильная регулярность — нули Δ0 асимптотически простые и отделены.
+- Теорема 2: при регулярности λ_k=λ_k^0(1+o(1)), оценка функции Грина вне кружков, полнота в L_p; при сильной регулярности f_k=f_k^0(1+o(1)).
+- Теорема 3: при строгой гиперболичности (5) безусловный базис со скобками, скобки только у сближающихся собственных значений.
+- Теорема 6: при сильной регулярности, (5) и A∈L_p, p∈(1,2]: Σ|λ_k−λ_k^0|^{p'}≤C и та же оценка для собственных функций в C[0,1].
+
+
+**Методы:**
+
+- асимптотика ФСР в полуплоскостях
+- квазиполином Дирихле
+- оценка функции Грина
+
+
+**Связанные источники:**
+
+- S48
+- S51
+- S8
+
+**Ключевые слова:** гиперболические системы, регулярность, сильная регулярность, асимптотика собственных значений.
+
+**Связь с проектом:** Шкаликов 2021: регулярные задачи гиперболического типа для y'−A(x)y=λB(x)y с переменной B(x) — кандидат для шага 3 идеи I43 (асимптотическая ФСР сложенной системы, линия G)
+
+**SHA-256:** PDF `cbd41ef4458f6c6be1f97b3af7114b61a52c6725d7370a9152e27f967102595c`.
+
+## S51. Asymptotic Representations of Solutions of $$n\times n$$ Systems of Ordinary Differential Equations with a Large Parameter
+
+**Авторы:** A. P. Kosarev; A. A. Shkalikov. **Версия:** Mathematical Notes, 116 (1-2), 283-302 (2024).
+[Первичный источник](https://doi.org/10.1134/S000143462407023X); [полный текст](https://www.mathnet.ru/php/getFT.phtml?jrnid=mzm&paperid=14398&what=fullt&option_lang=rus); [локальный PDF](../output/literature/S51.pdf).
+**Объём:** 24 стр. **Статус:** PDF; карточка есть.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
+**Связь с проектом:** Косарев–Шкаликов 2024: асимптотика решений n×n систем y'−By−C(·,λ)y=λAy — кандидат для шага 3 идеи I43 (линия G)
+
+**SHA-256:** PDF `c4ad5797f9ebfc1ae8b7bdbf0b7ffaa3dc60b60791dd61bc244b729ecfb7dec7`.
+
+## S52. Асимптотики по спектральному параметру для решений $(2 \times 2)$-систем обыкновенных дифференциальных уравнений / Asymptotics in the Spectral Parameter for Solutions of $2 \times 2$ Systems of Ordinary Differential Equations
+
+**Авторы:** А. П. Косарев; А. А. Шкаликов. **Версия:** Матем. заметки, 114:4 (2023), 543–562.
+[Первичный источник](https://www.mathnet.ru/rus/mzm14119); [полный текст](https://www.mathnet.ru/php/getFT.phtml?jrnid=mzm&paperid=14119&what=fullt&option_lang=rus); [локальный PDF](../output/literature/mzm14119.pdf).
+**Объём:** 20 стр. **Статус:** PDF; теоремы не проверены.
+
+**О чём** (статья; описано 05.11.2026, основание — аннотация, введение и формулировки): 2×2-система y'−By=λAy на [0,1], A=diag(a1,a2), элементы A и B суммируемы; a1−a2=a(x)>0, Im a1=Im a2 (условие (1.3)); в последнем пункте — |arg(a1−a2)|<φ<π/2.
+
+**Результаты:**
+
+- При (1.3) в полуплоскостях Re λ≥−κ и Re λ≤κ фундаментальная матрица Y=M(I+o(1))E с явным представлением остатка через интегралы (2.6).
+- При a1,a2,b12,b21∈W^n_1 и b11,b22∈W^{n−1}_1: Y=M(I+R1/λ+…+Rn/λ^n+o(λ^{−n}))E, R_k∈W^{n+1−k}_1 с явными формулами (теорема 1).
+- При |arg(a1−a2)|<φ<π/2 те же разложения в секторах |arg λ|≤π/2−φ−ε и противоположных.
+- Результаты новые и для системы Дирака и телеграфной системы.
+
+
+**Методы:**
+
+- интегральные уравнения для остатка
+- явное построение коэффициентов разложения
+- минимальная гладкость по Соболеву W^n_1
+
+
+**Связанные источники:**
+
+- S51
+- S54
+- S50
+
+**Ключевые слова:** асимптотика по спектральному параметру, фундаментальная матрица, система Дирака, 2×2-системы.
+
+**Связь с проектом:** Косарев–Шкаликов: асимптотика фундаментальной системы 2×2-системы y'−By=λAy с A=diag(a1(x),a2(x)) переменной; опора для блочной диагонализации с остатком в секторе (идеи I40, I37, I41; C24). У нас каналы σ±(x) и коэффициенты из W^1_∞
+
+**SHA-256:** PDF `fbfc1a37b3adea05363753a0b267d96344538094d92a2f9b22e70d18df32492e`.
+
+## S53. Spectral asymptotics for solutions of $2\times 2$ system of ordinary differential equations of the first order
+
+**Авторы:** A. P. Kosarev; A. A. Shkalikov. **Версия:** arXiv:2212.06227v1.
+[Первичный источник](https://arxiv.org/abs/2212.06227v1); [полный текст](https://arxiv.org/pdf/2212.06227v1); [локальный LaTeX](../output/literature/2212.06227v1.tex).
+**Статус:** LaTeX-исходник; теоремы не проверены.
+
+**Описание:** нет. Источник не прочитан: `python tools/sources/lit.py annotate`.
+
+**Связь с проектом:** Косарев–Шкаликов: асимптотика фундаментальной системы 2×2-системы y'−By=λAy с A=diag(a1(x),a2(x)) переменной; опора для блочной диагонализации с остатком в секторе (идеи I40, I37, I41; C24). У нас каналы σ±(x) и коэффициенты из W^1_∞
+
+**SHA-256:** исходник arXiv `2db21b9d7f052a3edefb7c82e3d2a3509f49ede7e8ec807300ac3370a7b0569b`.
+
+## S54. Асимптотические разложения решений $(n \times n)$-систем обыкновенных дифференциальных уравнений с большим параметром / Asymptotic expansions of solutions to $n \times n$ systems of ordinary differential equations with a large parameter
+
+**Авторы:** А. П. Косарев; А. А. Шкаликов. **Версия:** Матем. заметки, 116:6 (2024), 923–940.
+[Первичный источник](https://www.mathnet.ru/rus/mzm14508); [полный текст](https://www.mathnet.ru/php/getFT.phtml?jrnid=mzm&paperid=14508&what=fullt&option_lang=rus); [локальный PDF](../output/literature/mzm14508.pdf).
+**Объём:** 18 стр. **Статус:** PDF; карточка есть.
+
+**О чём** (статья; описано 05.11.2026, основание — аннотация, введение и формулировки): n×n-система y'−By−C(x,λ)y=λA(x)y на [0,1], A=diag(a_j) с a_j∈W^1_1, разности a_j−a_k с постоянными аргументами и отделённые (1.12); C раскладывается по степеням 1/λ.
+
+**Результаты:**
+
+- Теорема 1.1: в секторах, где показатели упорядочены, фундаментальная матрица Y=M(I+R1/λ+…+Rm/λ^m+o(λ^{−m}))E при гладкости коэффициентов порядка m.
+- Теорема 1.2: при той же гладкости и дополнительной суммируемости остаток O(λ^{−m−1}); при m=1 получается Y=M(I+O(1/λ))E.
+- Матрицы R_l определены неоднозначно, даны рекуррентные формулы (1.13)–(1.17).
+
+
+**Методы:**
+
+- диагонализация с переменными показателями
+- интегральные уравнения Вольтерра в секторах
+- разложение по степеням 1/λ
+
+
+**Связанные источники:**
+
+- S51
+- S52
+- S50
+
+**Ключевые слова:** асимптотические разложения, теория Биркгофа, n×n-системы, большой параметр.
+
+**Связь с проектом:** Косарев–Шкаликов 2024: асимптотические разложения фундаментальной матрицы n×n-системы y'−By−C(·,λ)y=λA(x)y по степеням 1/λ при гладких коэффициентах — кандидат на остаток O(1/ρ) для I40 и C24 (S51 даёт только o(1))
+
+**SHA-256:** PDF `3f7e4e74e6a8ee13877e3387df690d861139ac3d7ab54021f79057f367fc4517`.
+
+## S55. Asymptotic behavior of eigenvalues and eigenfunctions in a non-self-adjoint problem for the Schrödinger operator with involution
+
+**Авторы:** Akbope Beisebayeva; Abdizhahan M. Sarsenbi. **Версия:** AIMS Mathematics, 11 (7), 22052-22068 (2026).
+[Первичный источник](https://doi.org/10.3934/math.2026892); [полный текст](http://www.aimspress.com/aimspress-data/math/2026/7/PDF/math-11-07-892.pdf); [локальный PDF](../output/literature/10_3934_math_2026892.pdf).
+**Объём:** 17 стр. **Статус:** PDF; карточка есть.
+
+**О чём** (статья; описано 07.11.2026, основание — полный текст): Уравнение -u''(-x)+q(x)u(x)=lambda u(x) на (-1,1) с чётным комплекснозначным q из C[-1,1]; краевые условия u(-1)=0, u'(1)=u'(-1); коэффициент при u''(-x) постоянен.
+
+**Результаты:**
+
+- Лемма 2: асимптотики чётной и нечётной частей решения с остатком O(1/rho).
+- Теорема 3: lambda_k1=-(k pi+O(1/k))^2, lambda_k2=(k pi+O(1/k))^2.
+- Теорема 4: u_k1=sin(k pi x)+O(1/k), u_k2=cos(k pi x)+(-1)^k(e^{k pi x}-e^{-k pi x})/(e^{k pi}-e^{-k pi})+O(1/k).
+- Теоремы 5-7: асимптотики производных и оценки норм собственных функций.
+
+
+**Методы:**
+
+- разложение на чётную и нечётную части
+- интегральные уравнения Вольтерра
+- оценки Гронуолла
+
+
+**Связанные источники:**
+
+- S2
+- S6
+- S36
+- S58
+
+**Ключевые слова:** инволюция, отражение, асимптотика собственных значений, потенциал, несамосопряжённая задача.
+
+**Связь с проектом:** Асимптотики собственных значений и функций при переменном комплексном потенциале; старшая часть — чистое отражение -u''(-x), коэффициент постоянен, краевые условия специальные.
+
+**SHA-256:** PDF `4986d8aa188d44295a1d525aad532bf79bec72cda04fa38d1c26f7f0db705af3`.
+
+## S56. Solvability and spectral properties of a boundary value problem for differential equations with involution
+
+**Авторы:** Kairat Usmanov; Kulzina Nazarova; Zhazira Yerkisheva. **Версия:** AIMS Mathematics, 11 (6), 17124-17143 (2026).
+[Первичный источник](https://doi.org/10.3934/math.2026702); [полный текст](http://www.aimspress.com/aimspress-data/math/2026/6/PDF/math-11-06-702.pdf); [локальный PDF](../output/literature/10_3934_math_2026702.pdf).
+**Объём:** 20 стр. **Статус:** PDF; карточка есть.
+
+**О чём** (статья; описано 07.11.2026, основание — полный текст): Система x'(t)=A0(t)x(t)+A1(t)x(T-t)+f(t) с условием C0x(0)+C1x(T)=d; A0, A1 непрерывны и симметричны относительно T/2.
+
+**Результаты:**
+
+- Теорема 1: единственное решение тогда и только тогда, когда матрица Q обратима.
+- Теорема 2: при необратимой Q условие разрешимости b перпендикулярно ker(Q*).
+- Теорема 3: точный спектр модельной задачи с постоянными коэффициентами.
+
+
+**Методы:**
+
+- метод параметризации Джумабаева
+- сведение к задаче Коши
+- уравнения Вольтерра
+
+
+**Связанные источники:**
+
+- S48
+- S55
+
+**Ключевые слова:** инволюция, краевая задача, разрешимость, спектр, метод параметризации.
+
+**Связь с проектом:** Разрешимость и спектр краевой задачи для системы уравнений с инволюцией x(T-t); метод параметризации, постоянные коэффициенты в модельном примере, точный спектр.
+
+**SHA-256:** PDF `1c18dca700c795bd0570330509904418e4641eb69f61f87d2647a17685e559d1`.
+
+## S57. Boundary value problems for a second-order differential equation with involution in the second derivative and their solvability
+
+**Авторы:** Abdissalam Sarsenbi; Abdizhahan Sarsenbi. **Версия:** AIMS Mathematics, 8 (11), 26275-26289 (2023).
+[Первичный источник](https://doi.org/10.3934/math.20231340); [полный текст](http://www.aimspress.com/aimspress-data/math/2023/11/PDF/math-08-11-1340.pdf); [локальный PDF](../output/literature/10_3934_math_20231340.pdf).
+**Объём:** 15 стр. **Статус:** PDF; теоремы не проверены.
+
+**О чём** (статья; описано 07.11.2026, основание — полный текст): Нелинейное уравнение второго порядка с инволюцией во второй производной и младших членах; двухточечные краевые условия.
+
+**Результаты:**
+
+- Функция Грина линейной части задачи.
+- Теоремы существования и единственности классического решения.
+
+
+**Методы:**
+
+- функция Грина
+- принцип сжимающих отображений
+- теорема Шаудера
+
+
+**Связанные источники:**
+
+- S2
+- S6
+- S55
+
+**Ключевые слова:** инволюция, нелинейное уравнение, функция Грина, разрешимость.
+
+**Связь с проектом:** Разрешимость двухточечных задач для уравнения второго порядка с инволюцией во второй производной и младших членах; функция Грина, не асимптотики.
+
+**SHA-256:** PDF `6e56041321928249f8995b2e405823a9bd7d8a43af5e9e802f00becf3189db09`.
+
+## S58. Nonlocal spectral problem for a second-order differential equation with an involution
+
+**Авторы:** L.V. Kritskov; M.A. Sadybekov; A.M. Sarsenbi. **Версия:** BULLETIN OF THE KARAGANDA UNIVERSITY-MATHEMATICS, 91 (3), 53-60 (2018).
+[Первичный источник](https://doi.org/10.31489/2018m3/53-60); [полный текст](https://doi.org/10.31489/2018m3/53-60); [локальный PDF](../output/literature/10_31489_2018m3_53_60.pdf).
+**Объём:** 8 стр. **Статус:** PDF; карточка есть.
+
+**О чём** (статья; описано 07.11.2026, основание — полный текст): Задача -u''(x)+alpha u''(-x)=lambda u(x) на (-1,1) с условиями u(-1)=beta u(1), u'(-1)=u'(1), alpha из (-1,1), beta^2=1.
+
+**Результаты:**
+
+- Теорема 1: при иррациональном r система полна и минимальна, но не базис.
+- Теорема 2: при рациональном r система корневых функций является безусловным базисом после выбора присоединённых функций.
+
+
+**Методы:**
+
+- явные решения
+- биортогональные системы
+- теорема Кронекера
+
+
+**Связанные источники:**
+
+- S2
+- S6
+- S36
+
+**Ключевые слова:** инволюция, нелокальные условия, полнота, базисность.
+
+**Связь с проектом:** Нелокальная спектральная задача -u''(x)+alpha u''(-x)=lambda u(x) с условиями u(-1)=beta u(1), u'(-1)=u'(1); полнота и минимальность без базисности при иррациональном отношении.
+
+**SHA-256:** PDF `12adc77551fbae77f424261ef56ce89f5b4fb94e2e09fb4f307fe21ba19fa954`.
+
+## S59. On the Spectral Analysis of a Differential Operator with an Involution and General Boundary Conditions
+
+**Авторы:** Anatoly Baskakov; Ilya Krishtal; Natalya Borisovna Uskova. **Версия:** Eurasian Mathematical Journal, 11 (2), 30-39 (2020).
+[Первичный источник](https://doi.org/10.32523/2077-9879-2020-11-2-30-39); [полный текст](https://emj.enu.kz/index.php/main/article/download/176/162); [локальный PDF](../output/literature/S59.pdf).
+**Объём:** 18 стр. **Статус:** PDF; теоремы не проверены.
+
+**О чём** (статья; описано 07.11.2026, основание — полный текст): Оператор первого порядка Ly=y'(s)-g0(s)y(s)-g1(s)y(omega-s) на [0,omega] с инволюцией s в omega-s и непериодическими краевыми условиями; метод подобных операторов сводит его к оператору с периодическими условиями.
+
+**Результаты:**
+
+- Теорема 2.1, стр. 32: подобие оператора L оператору с периодическими краевыми условиями.
+- Теорема 5.1, стр. 36: подобие L оператору L0-(ln gamma/omega+q0(0))I-B с B из класса S2 и разложение в прямую сумму инвариантных подпространств.
+- Теорема 5.3, стр. 37: равносходимость семейств спектральных проекторов.
+- Теоремы 5.4-5.5, стр. 37-38: оценки операторных групп, порождённых L.
+
+
+**Методы:**
+
+- метод подобных операторов
+- сведение к периодической задаче
+- оценки спектральных проекторов
+- теория операторных групп
+
+
+**Связанные источники:**
+
+- S35 — первый порядок с инволюцией и одним краевым условием
+- S34 — первый порядок с переменным коэффициентом
+
+**Ключевые слова:** инволюция, первый порядок, спектральные проекторы, равносходимость, метод подобных операторов.
+
+**Связь с проектом:** Спектральный анализ оператора первого порядка с инволюцией и общими непериодическими краевыми условиями: подобие периодической задаче, асимптотические оценки собственных значений и проекторов, равносходимость, операторные группы.
+
+**SHA-256:** PDF `44ffa9e3cbd7d96b8b173bf465756c93da9585448ac3262f185dfaf350313755`.
+
+## S60. Eigenvalues and Eigenfunctions of Differential Operators with Involution
+
+**Авторы:** A. I. Kozhanov; O. I. Bzheumikhova. **Версия:** Siberian Mathematical Journal, 65 (5), 1139-1149 (2024).
+[Первичный источник](https://doi.org/10.1134/S0037446624050136); [полный текст](https://www.mathnet.ru/php/getFT.phtml?jrnid=smj&paperid=7902&what=fullt&option_lang=eng); [локальный PDF](../output/literature/S60.pdf).
+**Объём:** 12 стр. **Статус:** PDF; теоремы не проверены.
+
+**О чём** (статья; описано 07.11.2026, основание — полный текст): Обыкновенные дифференциальные уравнения первого порядка с линейной инволюцией t в T-t и нелокальными условиями; изучается влияние инволюции на существование ненулевых решений задачи Коши и краевых задач, а также на корректность параболических и псевдопараболических уравнений.
+
+**Результаты:**
+
+- Теорема 1, стр. 954: задача Коши (1)-(2) имеет ненулевые решения при mu=mu_m, m=2l, или mu=-mu_m, m=2l-1, и только нулевое иначе.
+- Теорема 3, стр. 957: при lambda<=0 задача Коши имеет только нулевое решение вне исключительных значений mu.
+- Теорема 4, стр. 958: нелокальная задача I имеет ненулевые решения при |mu|=mu_{m,1} или mu=-lambda.
+- Теорема 5, стр. 959: то же для нелокальной задачи II при |mu|=mu_{m,2}.
+- Теорема 6, стр. 960: для чётной или нечётной T/2-периодической N(t) существует бесконечно много mu, при которых нелокальная задача III имеет ненулевые решения.
+- Теорема 7, стр. 963: единственность решения задачи Коши для уравнения с переменным коэффициентом.
+
+
+**Методы:**
+
+- умножение уравнения на решение и интегрирование
+- анализ характеристического уравнения
+- метод разделения переменных
+- ряды Фурье
+
+
+**Связанные источники:**
+
+- S59 — первый порядок с инволюцией и общими условиями
+- S36 — второй порядок с инволюцией в старшей части
+
+**Ключевые слова:** инволюция, нелокальная задача, задача Коши, корректность, собственные функции, СМЖ.
+
+**Связь с проектом:** Нелокальные задачи Коши и краевые задачи для уравнений первого порядка с инволюцией t в T-t; собственные числа здесь — параметры уравнения, а не спектральные асимптотики; работа о корректности, не о регулярности.
+
+**SHA-256:** PDF `6cbba27f1af2bc3d4580b614204aafc1bf10e71958735f0983e31fe542dd8e90`.
+
+## S61. The inverse problem for the heat equation with reflection of the argument and with a complex coefficient
+
+**Авторы:** Elmira Mussirepova; Abdissalam Sarsenbi; Abdizhahan Sarsenbi. **Версия:** Boundary Value Problems, 2022 (1) (2022).
+[Первичный источник](https://doi.org/10.1186/s13661-022-01675-1); [полный текст](https://link.springer.com/content/pdf/10.1186/s13661-022-01675-1.pdf); [локальный PDF](../output/literature/10_1186_s13661_022_01675_1.pdf).
+**Объём:** 13 стр. **Статус:** PDF; теоремы не проверены.
+
+**О чём** (статья; описано 07.11.2026, основание — полный текст): Несамосопряжённый оператор L_{alpha q}y=-y''(x)+alpha y''(-x)+q(x)y(x) на (-1,1), alpha из (-1,1) постоянен, q комплекснозначный; область задана двумя общими линейными двухточечными формами, в теоремах — условия Дирихле, Неймана, периодические или антипериодические.
+
+**Результаты:**
+
+- Теорема 3.2, стр. 4: равносходимость спектральных разложений при простых собственных значениях, q из L1 и оценке функции Грина.
+- Теорема 3.3, стр. 5: система собственных функций оператора L_{alpha q} образует базис в L2(-1,1).
+- Теорема 3.4, стр. 5: при ограниченности |Im lambda_k| система собственных функций образует базис Рисса.
+- Следствие 3.6, стр. 8: базис Рисса при простых собственных значениях операторов L_{alpha 0} и L_{alpha q}.
+- Теорема 4.1, стр. 12: единственное решение обратной задачи для уравнения теплопроводности.
+
+
+**Методы:**
+
+- метод разделения переменных
+- равносходимость
+- критерий безусловной базисности
+- оценки функции Грина
+
+
+**Связанные источники:**
+
+- S6 — переменный потенциал при постоянном alpha и общих условиях
+- S58 — нелокальные условия для того же выражения
+- S62 — критерий простоты собственных значений
+
+**Ключевые слова:** инволюция, отражение аргумента, базис Рисса, обратная задача, уравнение теплопроводности.
+
+**Связь с проектом:** Обратная задача для уравнения теплопроводности с отражением аргумента во второй производной; переменный комплексный потенциал q(x), постоянный коэффициент alpha при y''(-x), стандартные краевые условия; попутно доказан базис Рисса собственных функций.
+
+**SHA-256:** PDF `84a59961f4847a4d89c513342da8c72b426f49352afc463f77305b1d27240add`.
+
+## S62. ON ROOT FUNCTIONS OF NONLOCAL DIFFERENTIAL SECOND-ORDER OPERATOR WITH BOUNDARY CONDITIONS OF PERIODIC TYPE
+
+**Авторы:** G. Dildabek; M. B. Ivanova; M. A. Sadybekov. **Версия:** Journal of Mathematics Mechanics and Computer Science, 112 (4) (2021).
+[Первичный источник](https://doi.org/10.26577/jmmcs.2021.v112.i4.03); [полный текст](https://bm.kaznu.kz/index.php/kaznu/article/download/963/629); [локальный PDF](../output/literature/10_26577_jmmcs_2021_v112_i4_03.pdf).
+**Объём:** 16 стр. **Статус:** PDF; теоремы не проверены.
+
+**О чём** (статья; описано 07.11.2026, основание — полный текст): Спектральная задача -y''(x)+epsilon y''(-x)=lambda y(x) на (-1,1), |epsilon|<1, с нелокальными условиями y'(-1)+a y'(1)=0, y(-1)-y(1)=0; рассматривается случай a, не равного -1.
+
+**Результаты:**
+
+- Теорема, стр. 42: критерий простоты собственных значений — число r=sqrt((1-epsilon)/(1+epsilon)) иррационально.
+- Теорема, стр. 42: при иррациональном r система собственных функций полна и минимальна, но не образует безусловного базиса в L2(-1,1).
+- Теорема, стр. 42: при рациональном r специально выбранная система корневых функций образует безусловный базис в L2(-1,1).
+
+
+**Методы:**
+
+- явные решения
+- теорема Дирихле о приближениях
+- биортогональные системы
+- критерий безусловной базисности
+
+
+**Связанные источники:**
+
+- S58 — та же нелокальная задача при beta^2=1
+- S36 — оператор с инволюцией в старшей части
+- S2 — общие двухточечные условия при постоянных коэффициентах
+
+**Ключевые слова:** инволюция, нелокальные условия, кратность собственных значений, безусловный базис, периодические условия.
+
+**Связь с проектом:** Корневые функции нелокального оператора второго порядка с инволюцией в главной части и условиями периодического типа; критерий простоты собственных значений и базисность при постоянном коэффициенте epsilon.
+
+**SHA-256:** PDF `1decc0b76c032df8e968e5db446dc225ea426833e7c2c25af0b7921b42a25e08`.
+
+## S63. Properties in L p of root functions for a nonlocal problem with involution
+
+**Авторы:** Leonid V. KRITSKOV; Makhmud A. SADYBEKOV; Abdizhahan M. SARSENBI. **Версия:** TURKISH JOURNAL OF MATHEMATICS, 43 (1), 393-401 (2019).
+[Первичный источник](https://doi.org/10.3906/mat-1809-12).
+**Статус:** Полного текста нет; теоремы не проверены.
+
+**О чём** (статья; описано 07.11.2026, основание — аннотация): Спектральная задача -u''(x)+alpha u''(-x)=lambda u(x), -1<x<1, с нелокальными условиями u(-1)=beta u(1), u'(-1)=u'(1), в пространствах L_p(-1,1) при alpha из (-1,1) и beta, не равном плюс-минус единице.
+
+**Результаты:**
+
+- Аннотация: при иррациональном r=sqrt((1-alpha)/(1+alpha)) система собственных функций полна и минимальна в L_p при любом p>1, но не образует базиса.
+- Аннотация: при рациональном r указан способ присоединения функций, при котором корневые функции образуют базис в L_p.
+
+
+**Методы:**
+
+- полного текста нет; метод известен по предыдущим работам Крицкова и Сарсенби
+
+
+**Связанные источники:**
+
+- S58 — та же задача в L2 при beta^2=1
+- S36 — оператор с инволюцией в старшей части
+
+**Ключевые слова:** инволюция, нелокальные условия, полнота, минимальность, базис в L_p.
+
+**Связь с проектом:** Корневые функции нелокальной задачи с инволюцией в L_p: полнота и минимальность при иррациональном r, базис после присоединения при рациональном r.
+
+## S64. Description of spectral properties of a generalized spectral problem with involution for differentiation operator of the second order
+
+**Авторы:** Makhmud A. Sadybekov; Abdizhahan Sarsenbi; Aizhan Tengayeva. **Версия:** AIP Conference Proceedings, 1759, 020154 (2016).
+[Первичный источник](https://doi.org/10.1063/1.4959768).
+**Статус:** Полного текста нет; теоремы не проверены.
+
+**О чём** (статья; описано 07.11.2026, основание — аннотация): Модельный оператор второго порядка l u=-u''(-x) с краевыми условиями общего вида; изучается базисность системы собственных функций в зависимости от коэффициентов краевых условий.
+
+**Результаты:**
+
+- Аннотация: установлен критерий базисности системы собственных функций по коэффициентам краевых условий.
+
+
+**Методы:**
+
+- полного текста нет; метод по аннотации не установлен
+
+
+**Связанные источники:**
+
+- S2 — второй порядок с общими двухточечными условиями и постоянными коэффициентами
+- S55 — чистое отражение -u''(-x) с переменным потенциалом
+
+**Ключевые слова:** инволюция, общие краевые условия, базисность, модельный оператор.
+
+**Связь с проектом:** Модельный оператор l u=-u''(-x) с краевыми условиями общего вида; критерий базисности собственных функций по коэффициентам условий.
