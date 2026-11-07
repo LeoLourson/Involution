@@ -2,11 +2,31 @@
 # requires-python = ">=3.11"
 # dependencies = ["numpy", "onnxruntime", "tokenizers", "huggingface_hub", "pymupdf", "certifi"]
 # ///
-"""Источники проекта: реестр, загрузка полных текстов, транскрипции, индекс и поиск.
+"""Источники проекта: поиск, реестр, полные тексты, транскрипции, индекс.
 
-Реестр — sources/registry.json; каталог sources/catalog.md (производный, с баннером
-`<!-- generated; do not edit -->`) строится из него подкомандой `catalog`.
-Тексты и индекс лежат в output/literature/, вне Git. Команды: python tools/sources/lit.py -h.
+С ЧЕГО НАЧАТЬ (веб-поиск — последнее средство, а не первое):
+  find "запрос" -n 15              zbMATH + arXiv (режим по умолчанию)
+  find "запрос" --in all           zbMATH + arXiv + Crossref + OpenAlex
+  find "запрос" --in crossref      Crossref: любые журналы, DOI, том, номер, страницы
+  find "запрос" --in openalex      OpenAlex: аннотации и число цитирований
+  find "запрос" --in mathnet       журналы Math-Net.Ru (Crossref, prefix 10.4213)
+  find "запрос" --in zbmath        zbMATH: переводные и русские журналы, аннотации
+  find "запрос" --in arxiv         arXiv: препринты (по этой теме почти пуст)
+  find "запрос" --in s2            Semantic Scholar; низкий лимит, только если другие молчат
+  doi 10.3934/math.2026892         журнал, том, страницы, авторы, аннотация, открытый PDF
+  cites S2                         кто цитирует: OpenAlex → MathNet → Semantic Scholar
+  cites 10.1016/j.jde.2022.02.027 --refs   список литературы источника
+  add 10.1016/j.jde.2022.02.027    метаданные + полный текст, если он открыт
+  add 2107.12209 mathnet:rm9740    arXiv даёт LaTeX, MathNet — PDF, DOI — описание или OA PDF
+  attach S55 путь.pdf              прикрепить полный текст, скачанный вручную
+  annotate файл.json               записать роль источника; audit — проверить описания
+  pdf S55; pages S55 --range 3-10; search "…"; show N; catalog; index
+
+Порядок: find → doi (сверить метаданные и статус) → add/attach (полный текст, если открыт)
+→ annotate (роль) → карточка claims/S*.md → сверка source-verifier.
+Реестр — sources/registry.json; каталог sources/catalog.md производный (баннер
+`<!-- generated; do not edit -->`). Тексты и индекс — output/literature/, вне Git.
+Полная справка: python tools/sources/lit.py -h.
 """
 from __future__ import annotations
 
@@ -449,19 +469,27 @@ def crossref_meta(doi: str) -> dict:
     )
 
 
-def crossref_search(query: str, limit: int, prefix: str) -> list[dict]:
-    params = urllib.parse.urlencode({'query.bibliographic': query, 'filter': 'prefix:' + prefix, 'rows': limit,
-                                     'select': 'DOI,title,author,issued,container-title'})
+def crossref_search(query: str, limit: int, prefix: str | None = None) -> list[dict]:
+    """Поиск в Crossref. prefix ограничивает издателя (10.4213 — журналы MathNet), None — весь Crossref."""
+    params = {'query.bibliographic': query, 'rows': limit,
+              'select': 'DOI,title,author,issued,container-title,volume,issue,page,abstract'}
+    if prefix:
+        params['filter'] = 'prefix:' + prefix
     papers = []
-    for item in json.loads(http_get('https://api.crossref.org/works?' + params))['message']['items']:
+    for item in json.loads(http_get('https://api.crossref.org/works?' + urllib.parse.urlencode(params)))['message']['items']:
         doi = item['DOI']
+        place = ', '.join(part for part in (
+            (item.get('container-title') or [''])[0],
+            ' '.join(filter(None, [item.get('volume'), f"({item['issue']})" if item.get('issue') else ''])),
+            item.get('page')) if part)
         papers.append(dict(
             mathnet=doi.split('/', 1)[1].lower() if doi.startswith('10.4213/') else None,
             doi=doi,
             title=squash((item.get('title') or ['?'])[0]),
-            authors=[squash(f"{a.get('given', '')} {a.get('family', '')}") for a in item.get('author', [])],
+            authors=[squash(f"{a.get('given', '')} {a.get('family', '')}")
+                     for a in item.get('author', []) if a.get('family') or a.get('given')],
             year=((item.get('issued') or {}).get('date-parts') or [['']])[0][0],
-            abstract=(item.get('container-title') or [''])[0],
+            abstract=squash(' '.join(filter(None, [place, html_text(item.get('abstract') or '')]))),
         ))
     return papers
 
@@ -497,6 +525,73 @@ def scholar(ref: str, references: bool, limit: int) -> list[dict]:
                                year=paper.get('year'), authors=[a['name'] for a in paper.get('authors') or []],
                                abstract=squash(paper.get('abstract'))))
     return papers
+
+
+# ---------- OpenAlex и Semantic Scholar: поиск и метаданные ----------
+
+def _openalex_abstract(item: dict) -> str:
+    """Собирает аннотацию OpenAlex из обратного индекса слов."""
+    pos = {}
+    for word, places in (item.get('abstract_inverted_index') or {}).items():
+        for place in places:
+            pos[place] = word
+    return squash(' '.join(pos[key] for key in sorted(pos)))
+
+
+def _openalex_paper(item: dict) -> dict:
+    doi = (item.get('doi') or '').replace('https://doi.org/', '').lower()
+    biblio = item.get('biblio') or {}
+    source = ((item.get('primary_location') or {}).get('source') or {}).get('display_name', '')
+    place = ', '.join(part for part in (
+        source,
+        ' '.join(filter(None, [biblio.get('volume'), f"({biblio['issue']})" if biblio.get('issue') else ''])),
+        '-'.join(filter(None, [biblio.get('first_page'), biblio.get('last_page')])) if biblio.get('first_page') else '') if part)
+    return dict(doi=doi or None, openalex=item.get('id'),
+                title=squash(item.get('title')),
+                authors=[a.get('author', {}).get('display_name', '') for a in item.get('authorships') or []],
+                year=str(item.get('publication_year') or ''),
+                abstract=squash(' '.join(filter(None, [place, _openalex_abstract(item)]))),
+                cited_by=item.get('cited_by_count'))
+
+
+def openalex_search(query: str, limit: int) -> list[dict]:
+    params = urllib.parse.urlencode({'search': query, 'per-page': limit, 'mailto': 'lit@project.local'})
+    items = json.loads(http_get('https://api.openalex.org/works?' + params)).get('results') or []
+    return [_openalex_paper(item) for item in items]
+
+
+def openalex_meta(doi: str) -> dict:
+    url = ('https://api.openalex.org/works/https://doi.org/' + urllib.parse.quote(doi, safe=':/')
+           + '?mailto=lit@project.local')
+    item = json.loads(http_get(url))
+    paper = _openalex_paper(item)
+    location = item.get('best_oa_location') or {}
+    paper['pdf_url'] = location.get('pdf_url')
+    paper['referenced'] = item.get('referenced_works') or []
+    return paper
+
+
+def s2_search(query: str, limit: int) -> list[dict]:
+    url = ('https://api.semanticscholar.org/graph/v1/paper/search?query=' + urllib.parse.quote(query)
+           + f'&limit={limit}&fields=title,authors,year,venue,externalIds,abstract')
+    papers = []
+    for item in json.loads(http_get(url)).get('data') or []:
+        external = item.get('externalIds') or {}
+        papers.append(dict(arxiv=external.get('ArXiv'), doi=external.get('DOI'), title=item.get('title') or '',
+                           year=item.get('year'),
+                           authors=[a['name'] for a in item.get('authors') or []],
+                           abstract=squash(' '.join(filter(None, [item.get('venue'), item.get('abstract')])))))
+    return [paper for paper in papers if paper['title']]
+
+
+def openalex_citing(doi: str, limit: int) -> list[dict]:
+    meta = openalex_meta(doi)
+    if not meta.get('openalex'):
+        return []
+    work = meta['openalex'].rsplit('/', 1)[-1]
+    url = ('https://api.openalex.org/works?filter=cites:' + work
+           + f'&per-page={limit}&mailto=lit@project.local')
+    return [_openalex_paper(item) for item in json.loads(http_get(url)).get('results') or []]
 
 
 # ---------- файлы источников ----------
@@ -588,6 +683,17 @@ def add(idents: list[str], role: str) -> list[str]:
                 row.update(authors='; '.join(meta['authors']), title=meta['title'], year=meta['year'],
                            version=meta['version'], url='https://doi.org/' + value, doi=value, role=role)
                 got = 'только описание; файл добавляется командой attach'
+                try:
+                    oa = openalex_meta(value)
+                    if not row['authors'] and oa.get('authors'):
+                        row['authors'] = '; '.join(oa['authors'])
+                    if oa.get('pdf_url'):
+                        row['pdf_url'] = oa['pdf_url']
+                        store_pdf(row, http_get(oa['pdf_url']), re.sub(r'[^0-9A-Za-z]+', '_', value) + '.pdf')
+                        got = f"PDF открытого доступа, {row['pages']} стр." + (
+                            '' if row.get('text_layer') else ', скан без текстового слоя')
+                except Exception as error:  # noqa: BLE001 — описание уже получено, PDF необязателен
+                    got += f' (открытый PDF не получен: {error})'
         except (ValueError, ConnectionError, urllib.error.URLError) as error:
             report.append(f'{ident}: ОШИБКА — {error}')
             continue
@@ -642,6 +748,17 @@ def fetch(codes: list[str] | None = None) -> list[str]:
     for row in selected(rows, codes):
         done = []
         try:
+            if codes and not row.get('pdf_url') and dois_of(row):
+                try:
+                    found = openalex_meta(row.get('doi') or dois_of(row)[0])
+                    if found.get('pdf_url'):
+                        row['pdf_url'] = found['pdf_url']
+                except Exception:  # noqa: BLE001 — ссылка необязательна
+                    pass
+            if codes and not row.get('filename') and row.get('pdf_url'):
+                store_pdf(row, http_get(row['pdf_url']),
+                          re.sub(r'[^0-9A-Za-z]+', '_', row.get('doi') or row['code']) + '.pdf')
+                done.append(f"PDF, {row['pages']} стр.")
             if row.get('filename') and not (LIT / row['filename']).exists():
                 url = row.get('pdf_url')
                 if not url:
@@ -673,6 +790,13 @@ def pdf(code: str) -> list[str]:
     row = by_code(rows, code)
     if row.get('filename') and (LIT / row['filename']).exists():
         return [f"{row['code']}: output/literature/{row['filename']} уже есть"]
+    if not row.get('pdf_url') and dois_of(row):
+        try:
+            found = openalex_meta(row.get('doi') or dois_of(row)[0])
+            if found.get('pdf_url'):
+                row['pdf_url'] = found['pdf_url']
+        except Exception:  # noqa: BLE001 — ссылка необязательна
+            pass
     if not row.get('pdf_url'):
         raise SystemExit(f"{row['code']}: ссылки на PDF нет; прикрепите файл командой attach")
     store_pdf(row, http_get(row['pdf_url']), row.get('filename') or stem_of(row) + '.pdf')
@@ -1326,41 +1450,93 @@ def describe(papers: list[dict]) -> str:
 
 
 def find(query: str, where: str | None = None, limit: int = 15) -> str:
-    """Кандидаты из zbMATH, arXiv и журналов MathNet.
+    """Кандидаты из zbMATH, arXiv, Crossref, OpenAlex, Semantic Scholar и журналов MathNet.
 
-    Простой текст без where идёт в zbMATH и arXiv. Синтаксис полей у каждого свой: в arXiv —
-    all:, ti:, abs:, au:, AND, OR; в zbMATH — ti:, au:, py:, &, |. С такими полями нужен where.
+    Простой текст без where идёт в zbMATH и arXiv; where=all — во все базы, кроме Semantic Scholar
+    (у неё низкий лимит запросов). Синтаксис полей у каждого свой: в arXiv — all:, ti:, abs:, au:,
+    AND, OR; в zbMATH — ti:, au:, py:, &, |. С такими полями нужен where.
     """
+    engines = [where] if where else ['zbmath', 'arxiv']
+    if where == 'all':
+        engines = ['zbmath', 'arxiv', 'crossref', 'openalex']
     out = []
-    for engine in ([where] if where else ['zbmath', 'arxiv']):
-        if engine == 'zbmath':
-            found = zbmath_search(query, limit)
-        elif engine == 'arxiv':
-            words = query if re.search(r'\b(all|ti|abs|au|cat):', query) else \
-                ' AND '.join('all:' + word for word in re.findall(r'"[^"]+"|\S+', query))
-            found = arxiv_query(search_query=words, max_results=limit, sortBy='relevance')
-        elif engine == 'mathnet':
-            found = crossref_search(query, limit, '10.4213')
-        else:
-            raise SystemExit(f'Неизвестная база «{engine}»: zbmath, arxiv или mathnet.')
+    for engine in engines:
+        try:
+            if engine == 'zbmath':
+                found = zbmath_search(query, limit)
+            elif engine == 'arxiv':
+                words = query if re.search(r'\b(all|ti|abs|au|cat):', query) else \
+                    ' AND '.join('all:' + word for word in re.findall(r'"[^"]+"|\S+', query))
+                found = arxiv_query(search_query=words, max_results=limit, sortBy='relevance')
+            elif engine == 'mathnet':
+                found = crossref_search(query, limit, '10.4213')
+            elif engine == 'crossref':
+                found = crossref_search(query, limit, None)
+            elif engine == 'openalex':
+                found = openalex_search(query, limit)
+            elif engine == 's2':
+                found = s2_search(query, limit)
+            else:
+                raise SystemExit(f'Неизвестная база «{engine}»: zbmath, arxiv, mathnet, crossref, openalex, s2 или all.')
+        except Exception as error:  # noqa: BLE001 — одна база не должна обрывать остальные
+            out.append(f'== {engine} ==\nОШИБКА: {error}')
+            continue
         out.append(f'== {engine} ==\n{describe(found)}')
     return '\n'.join(out)
 
 
 def cites(ref: str, references: bool = False, limit: int = 60) -> str:
-    """Работы, цитирующие источник (references — цитируемые им): MathNet или Semantic Scholar."""
+    """Кто цитирует источник (--refs — что цитирует он): OpenAlex, MathNet, Semantic Scholar.
+
+    OpenAlex — основной путь: даёт DOI и годы. MathNet — для русских журналов, у которых есть
+    идентификатор. Semantic Scholar — запасной, у него низкий лимит запросов.
+    """
     row = by_code(load(), ref) if re.fullmatch(r'[Ss]\d+', ref) else None
+    doi = None
     if row:
         if row.get('mathnet') and not references:
             return describe(mathnet_citing(row['mathnet'])[:limit])
-        ident = 'arXiv:' + bare(arxiv_id(row)) if arxiv_id(row) else \
-            'DOI:' + (row.get('doi_en') or (dois_of(row) or [''])[0])
+        doi = row.get('doi_en') or row.get('doi') or (dois_of(row) or [None])[0]
+        ident = 'arXiv:' + bare(arxiv_id(row)) if arxiv_id(row) else 'DOI:' + (doi or '')
     else:
         kind, value = classify(ref)
         if kind == 'mathnet' and not references:
             return describe(mathnet_citing(value)[:limit])
         ident = {'arxiv': 'arXiv:' + bare(value), 'mathnet': 'DOI:10.4213/' + value, 'doi': 'DOI:' + value}[kind]
+        doi = '10.4213/' + value if kind == 'mathnet' else (value if kind == 'doi' else None)
+    if doi and not references:
+        try:
+            found = openalex_citing(doi, limit)
+            if found:
+                return describe(found)
+        except Exception:  # noqa: BLE001 — запасной путь ниже
+            pass
     return describe(scholar(ident, references, limit))
+
+
+def doi_info(doi: str) -> str:
+    """Метаданные DOI из Crossref и OpenAlex: журнал, том, страницы, авторы, аннотация, открытый PDF."""
+    out = []
+    try:
+        meta = crossref_meta(doi)
+        out += ['== Crossref ==',
+                f"DOI:{meta['doi']} · {meta['year']} · {'; '.join(meta['authors'])}",
+                f"  {meta['title']}", f"  {meta['version']}"]
+    except Exception as error:  # noqa: BLE001 — вторая база может ответить
+        out.append(f'== Crossref ==\nОШИБКА: {error}')
+    try:
+        meta = openalex_meta(doi)
+        out += ['== OpenAlex ==',
+                f"DOI:{meta['doi']} · {meta['year']} · {'; '.join(meta['authors'])}",
+                f"  {meta['title']}"]
+        if meta.get('abstract'):
+            out.append(f"  АННОТАЦИЯ: {meta['abstract'][:900]}")
+        if meta.get('pdf_url'):
+            out.append(f"  ОТКРЫТЫЙ PDF: {meta['pdf_url']}")
+        out.append(f"  цитируют: {meta.get('cited_by')}")
+    except Exception as error:  # noqa: BLE001
+        out.append(f'== OpenAlex ==\nОШИБКА: {error}')
+    return '\n'.join(out)
 
 
 def listing() -> str:
@@ -1377,10 +1553,13 @@ def listing() -> str:
 def main() -> None:
     sys.stdout.reconfigure(encoding='utf-8', errors='replace')
     sys.stderr.reconfigure(encoding='utf-8', errors='replace')
-    parser = argparse.ArgumentParser(description=__doc__.split('\n')[0])
+    parser = argparse.ArgumentParser(
+        description=__doc__.split('\n')[0],
+        epilog=__doc__.split('\n', 1)[1],
+        formatter_class=argparse.RawDescriptionHelpFormatter)
     commands = parser.add_subparsers(dest='command', required=True)
 
-    p = commands.add_parser('add', help='добавить источники: arXiv, mathnet:rm9740, DOI')
+    p = commands.add_parser('add', help='добавить источники: arXiv, mathnet:rm9740, DOI (OA PDF скачивается сам)')
     p.add_argument('ids', nargs='+')
     p.add_argument('--role', required=True, help='связь с проектом, одна-две фразы')
 
@@ -1420,11 +1599,17 @@ def main() -> None:
     p.add_argument('id', type=int)
     p.add_argument('-n', type=int, default=0, help='сколько соседних кусков показать с каждой стороны')
 
-    p = commands.add_parser('find', help='искать кандидатов в zbMATH, arXiv, журналах MathNet')
+    p = commands.add_parser('find', help='кандидаты: zbMATH, arXiv, Crossref, OpenAlex, Semantic Scholar, MathNet',
+                            description='Ищет кандидатов и печатает идентификаторы, авторов, журнал и аннотацию. '
+                                        'По умолчанию — zbMATH и arXiv; --in all — плюс Crossref и OpenAlex.')
     p.add_argument('query')
-    p.add_argument('--in', dest='where', choices=['zbmath', 'arxiv', 'mathnet'])
+    p.add_argument('--in', dest='where',
+                   choices=['zbmath', 'arxiv', 'mathnet', 'crossref', 'openalex', 's2', 'all'],
+                   help='база; all = zbMATH+arXiv+Crossref+OpenAlex; mathnet = журналы Math-Net.Ru')
     p.add_argument('-n', type=int, default=15)
-    p = commands.add_parser('cites', help='кто цитирует источник (MathNet, Semantic Scholar)')
+    p = commands.add_parser('doi', help='метаданные DOI: журнал, том, страницы, авторы, аннотация, открытый PDF')
+    p.add_argument('doi')
+    p = commands.add_parser('cites', help='кто цитирует источник: OpenAlex, MathNet, Semantic Scholar')
     p.add_argument('ref', help='код из реестра, идентификатор arXiv, mathnet:… или DOI')
     p.add_argument('--refs', action='store_true', help='наоборот: список литературы источника')
     p.add_argument('-n', type=int, default=60)
@@ -1462,6 +1647,8 @@ def main() -> None:
         result = [show(args.id, args.n)]
     elif args.command == 'find':
         result = [find(args.query, args.where, args.n)]
+    elif args.command == 'doi':
+        result = [doi_info(args.doi)]
     elif args.command == 'cites':
         result = [cites(args.ref, args.refs, args.n)]
     else:

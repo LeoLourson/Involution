@@ -10,7 +10,7 @@
 $L_a y=-y''(x)-a(x)y''(-x)$ на $(-1,1)$ с условиями Дирихле.
 Постановка — `claims/question.md`; записи C1–C19 с доказательствами — `claims/C*.md`
 (класс `record`); миниобзор и связное изложение — `paper/review.tex` и
-`paper/exposition.tex` (класс `paper`); рабочие идеи по открытым узлам —
+экспозиции `paper/exposition.tex`, `paper/exposition-ИМЯ.tex` (класс `paper`); рабочие идеи по открытым узлам —
 `claims/I*.md` (класс `idea`); источники — `sources/` (класс `collection`);
 узлы, модули и задачи Aristotle — производный `blueprint.md` (класс `plan`).
 Таблица результатов и полный список единиц — в производном `index.md` (класс
@@ -182,17 +182,19 @@ Aristotle). Ключи и обязательные поля шапки — в `F
   запускает `pdflatex` и печатает предупреждения; неразрешённые ссылки и
   `Overfull` исправляй. При рабочем Perl годится
   `latexmk -pdf -outdir=output/build paper/review.tex`.
-- `paper/exposition.tex` собирает
-  `powershell -NoProfile -ExecutionPolicy Bypass -File tools\docs\build-exposition.ps1`
-  теми же двумя проходами `pdflatex`; предупреждения проверяй так же.
+- Экспозиции `paper/exposition.tex` (основная) и `paper/exposition-ИМЯ.tex` собирает
+  `powershell -NoProfile -ExecutionPolicy Bypass -File tools\docs\build-exposition.ps1 -Name ИМЯ`
+  (без `-Name` — основная, `-All` — все) теми же двумя проходами `pdflatex`; предупреждения
+  проверяй так же. Новая экспозиция начинается с шаблона `tools/docs/exposition-template.tex`;
+  её линия и область записаны в первых строках файла (`% exposition:`, `% scope:`).
 - Реестр источников — `sources/registry.json`. Его правит
   `python tools/sources/lit.py` (`add`, `add-file`, `attach`, `fetch`, `pdf`) и он же
   пересобирает `sources/catalog.md` (`catalog`). `add` принимает идентификатор arXiv,
   `mathnet:rm9740` и DOI: с arXiv приходит авторский LaTeX, с MathNet — PDF, по
   одному DOI — только описание. Тексты и индекс лежат в `output/literature/`;
   недостающие файлы восстанавливает `fetch`.
-- Новых кандидатов ищут `find` (zbMATH, arXiv, журналы MathNet) и `cites`
-  (списки цитирования MathNet и Semantic Scholar). К `mathnet.ru` инструмент
+- Новых кандидатов ищут `find` (zbMATH, arXiv, Crossref, OpenAlex, журналы MathNet) и
+  `cites` (OpenAlex, затем MathNet и Semantic Scholar). К `mathnet.ru` инструмент
   обращается мимо VPN-туннеля, с адреса другого сетевого интерфейса: через
   туннель сайт не отвечает.
 - LaTeX из PDF делает команда `/transcribe`: агент читает страницы и пишет части
@@ -200,6 +202,9 @@ Aristotle). Ключи и обязательные поля шапки — в `F
   PDF моделью; при расхождении первичен PDF.
 - Поиск по полным текстам — `python tools/sources/lit.py search "запрос"` или
   инструменты сервера `lit` из `.mcp.json`; кусок целиком печатает `show N`.
+  Инструменты сервера повторяют команды `lit.py` (find, doi, cites, add, attach, pdf,
+  pages, tex, search, show) и читаются моделью без справки CLI: при доступном MCP
+  пользуйся им, веб-поиск — последнее средство.
   Найденный кусок остаётся непроверенным источником, пока у теоремы нет карточки
   `claims/S*.md`. Номер теоремы и страницу для карточки берут из PDF
   (`pdf КОД`, `pages КОД`); карточку сверяет роль `source-verifier`.
@@ -235,10 +240,11 @@ Aristotle). Ключи и обязательные поля шапки — в `F
   проверки и отчёт.
 - Идеи по открытым узлам записывай в `claims/I*.md` со статусом и следующим шагом;
   отвергнутые оставляй с причиной. Доказанное переноси в запись `claims/C*.md`.
-- `paper/exposition.tex` правит только команда `/exposition`
-  (`.claude/commands/exposition.md`): в статью входят значимые результаты с
+- Экспозиции `paper/exposition*.tex` правит только команда `/exposition`
+  (`.claude/commands/exposition.md`): в статью входят значимые результаты из её области с
   доказательством или адресной ссылкой на него, каждый встраивается в единую линию
-  изложения.
+  изложения. Каждая экспозиция — самостоятельная статья: на другие экспозиции она не
+  ссылается.
 - Новые источники ищет команда `/sources` (`.claude/commands/sources.md`). Кандидатов
   собирает роль `literature-scout`; отбор, роль источника и карточки теорем
   остаются за основной моделью. PDF в LaTeX переводит команда `/transcribe`.
@@ -315,10 +321,10 @@ Code skill с полем `paths` подключается только при р
 | Слой | Скилл | Вопрос | Файлы |
 | --- | --- | --- | --- |
 | содержание | `math-rigor` | верно ли утверждение и можно ли его проверить | любое математическое рассуждение: запись, идея, статья, обзор |
-| композиция | `paper-canvas` | что сказано и что из этого главное | `paper/exposition.tex`, `paper/review.tex` |
-| стиль автора | `shkalikov-style` | как автор строит части статьи и какими оборотами пишет | `paper/exposition.tex` |
-| язык | `paper-de-ai` | есть ли слова и конструкции без содержания | `paper/exposition.tex`, `paper/review.tex` |
-| набор | `math-typeset` | как набраны текст и формулы | `paper/exposition.tex`, `paper/review.tex`, формулы в `.md` |
+| композиция | `paper-canvas` | что сказано и что из этого главное | `paper/exposition*.tex`, `paper/review.tex` |
+| стиль автора | `shkalikov-style` | как автор строит части статьи и какими оборотами пишет | `paper/exposition*.tex` |
+| язык | `paper-de-ai` | есть ли слова и конструкции без содержания | `paper/exposition*.tex`, `paper/review.tex` |
+| набор | `math-typeset` | как набраны текст и формулы | `paper/exposition*.tex`, `paper/review.tex`, формулы в `.md` |
 
 - Как слои уступают друг другу, сказано в разделе «Слои текста» каждого скилла:
   содержание выше остальных; что сказать, решает композиция, а где и в каком порядке —

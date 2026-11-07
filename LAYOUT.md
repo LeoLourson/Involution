@@ -35,7 +35,7 @@
 | `record` | `claims/C*.md` | человек | запись результата: один файл — одно утверждение |
 | `idea` | `claims/I*.md` | человек | идея по открытому узлу |
 | `card` | `claims/S*.md` | человек | карточка чужого результата |
-| `paper` | `paper/*.tex` | человек | изложение: `paper/review.tex`, `paper/exposition.tex` |
+| `paper` | `paper/*.tex` | человек | изложение: `paper/review.tex`, экспозиции `paper/exposition.tex` и `paper/exposition-ИМЯ.tex` |
 | `collection` | `sources/registry.json`, `sources/README.md` | человек | опись коллекции источников |
 | `library` | `Involution/<Слой>/*.lean`, `Involution.lean` | человек | Lean: слои теории |
 | `tool` | `tools/**` | человек | скрипты процесса |

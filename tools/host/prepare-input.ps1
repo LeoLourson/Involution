@@ -35,7 +35,10 @@ try {
     if (Test-Path -LiteralPath $claims) {
         foreach ($file in Get-ChildItem -LiteralPath $claims -File -Filter *.md) { Copy-Record ('claims/' + $file.Name) }
     }
-    foreach ($name in @('paper/review.tex', 'paper/exposition.tex',
+    foreach ($file in Get-ChildItem -LiteralPath (Join-Path $projectRoot 'paper') -File -Filter 'exposition*.tex') {
+        Copy-Record ('paper/' + $file.Name)
+    }
+    foreach ($name in @('paper/review.tex',
                         'sources/registry.json', 'sources/catalog.md', 'sources/README.md')) {
         Copy-Record $name
     }

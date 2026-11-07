@@ -16,7 +16,7 @@ $L_a y\in L_2(-1,1;\mathbb C)$, при вещественном $a$. Проек�
 | правила и вход | `AGENTS.md`, `README.md`, `CLAUDE.md` |
 | постановка | `claims/question.md` |
 | записи, идеи, карточки | `claims/C*.md`, `claims/I*.md`, `claims/S*.md` |
-| изложение | `paper/review.tex`, `paper/exposition.tex` |
+| изложение | `paper/review.tex`, экспозиции `paper/exposition*.tex` |
 | источники | `sources/registry.json`, `sources/README.md`, `sources/catalog.md` |
 | библиотека Lean | `Involution/<Слой>/*.lean`, `Involution.lean` |
 | инструменты | `tools/**` |
@@ -60,7 +60,7 @@ Lean `v4.35.0-rc4`, Mathlib `v4.35.0-rc4`. Если `lake` не найден, д
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File tools\docs\build-review.ps1
-powershell -NoProfile -ExecutionPolicy Bypass -File tools\docs\build-exposition.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File tools\docs\build-exposition.ps1 -All
 ```
 
 Скрипты запускают из корня проекта, готовые PDF — в `output/build`; они дважды
