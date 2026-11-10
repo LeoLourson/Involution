@@ -249,17 +249,20 @@ def check_derived(root: Path, report: Report, data: dict) -> None:
             report.bad(f"{rel}: не совпадает с выводом генератора, пересобери")
     catalog = root / "sources" / "catalog.md"
     if not catalog.is_file():
-        report.bad("sources/catalog.md: файла нет (собирает tools/sources/lit.py catalog)")
+        report.bad("sources/catalog.md: файла нет (собирает `lit catalog`)")
     else:
         text, error = read_text(catalog)
         if text is None:
             report.bad(f"sources/catalog.md: {error}")
         else:
-            first = text.replace("\r\n", "\n").split("\n")[0].strip()
-            if "generated" in first and "do not edit" in first:
+            head = text.replace("\r\n", "\n").split("\n")[:6]
+            # Каталог MathPaperLib баннера не несёт: первый абзац называет собравшую его команду.
+            if ("generated" in head[0] and "do not edit" in head[0]) or any(
+                    "собран командой `lit catalog`" in line for line in head):
                 report.ok("sources/catalog.md: баннер на месте")
             else:
-                report.bad(f"sources/catalog.md: первая строка {first!r} без баннера generated")
+                report.bad(f"sources/catalog.md: первая строка {head[0].strip()!r} без баннера generated "
+                           "и без пометки о команде `lit catalog`")
 
 
 def check_lean(root: Path, report: Report) -> None:

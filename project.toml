@@ -1,0 +1,5 @@
+[sources]
+registry = "sources/registry.json"
+catalog = "sources/catalog.md"
+cards = "claims"
+direct_hosts = ["mathnet.ru"]

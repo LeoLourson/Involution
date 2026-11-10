@@ -70,6 +70,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File tools\docs\build-exposition.
 
 ## Источники
 
-Реестр — `sources/registry.json`, правит его `python tools/sources/lit.py` (`add`,
-`add-file`, `attach`, `fetch`, `pdf`); каталог `sources/catalog.md` пересобирает
-`catalog`. Опись коллекции и внешние исходные файлы — `sources/README.md`.
+Реестр — `sources/registry.json`, правит его [MathPaperLib](https://github.com/LeoLourson/MathPaperLib)
+(команда `lit`: `add`, `add-file`, `attach`, `inbox`, `fetch`, `pdf`); каталог
+`sources/catalog.md` пересобирает `lit catalog`. Полные тексты лежат в общей библиотеке
+`~/Literature`, настройки проекта — в `project.toml`. Опись коллекции и внешние исходные файлы — `sources/README.md`.

@@ -7,7 +7,7 @@ applies_to: []
 ---
 
 **Авторы:** Anton A. Lunyov, Mark M. Malamud. **Версия:** arXiv:1504.04954v1.
-[Источник](https://arxiv.org/abs/1504.04954v1), [PDF](../output/literature/1504.04954v1.pdf).
+[Источник](https://arxiv.org/abs/1504.04954v1), PDF `Lunyov, Malamud 2015 - On the Riesz basis property of root vectors system for 2 2 Dirac type operators.pdf`.
 
 **Теорема 1.1, с. 4.** Система типа Дирака (1.8)–(1.10) с постоянной матрицей
 $B=\operatorname{diag}(b_1,b_2)$, $b_1<0<b_2$, суммируемыми недиагональными

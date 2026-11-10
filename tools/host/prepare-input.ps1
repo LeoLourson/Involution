@@ -11,9 +11,10 @@ $copied = [System.Collections.Generic.List[string]]::new()
 $missing = [System.Collections.Generic.List[string]]::new()
 
 function Copy-Record {
-    param([string]$Relative)
+    # $From задаёт файл вне проекта (библиотека MathPaperLib); в снимок он идёт под именем $Relative.
+    param([string]$Relative, [string]$From)
     if ($copied.Contains($Relative)) { return }
-    $source = Join-Path $projectRoot $Relative
+    $source = if ($From) { $From } else { Join-Path $projectRoot $Relative }
     if (-not (Test-Path -LiteralPath $source -PathType Leaf)) {
         $missing.Add($Relative)
         return
@@ -63,23 +64,27 @@ try {
         throw 'Нет реестра sources/registry.json: полные тексты не сверить, снимок не собрать.'
     }
     $papers = Get-Content -LiteralPath $registry -Raw -Encoding UTF8 | ConvertFrom-Json
+    # Библиотека, где лежат тексты: то же правило, что у `lit` (tools/state/facets.py).
+    $library = (& python -c "import sys; sys.path.insert(0, sys.argv[1]); import facets, pathlib; print(facets.library_dir(pathlib.Path(sys.argv[2])))" (Join-Path $projectRoot 'tools/state') $projectRoot).Trim()
+    if ($LASTEXITCODE -ne 0 -or -not $library) { throw 'Не удалось определить библиотеку lit (tools/state/facets.py library_dir).' }
     foreach ($paper in $papers) {
         $names = @()
         if ($paper.tex) { $names += $paper.tex }
         if ($paper.filename) { $names += $paper.filename }
         # Запись, добавленная по одному DOI, полного текста ещё не имеет; она пропускается.
         foreach ($name in $names) {
-            $file = Join-Path $projectRoot ('output/literature/' + $name)
+            $file = Join-Path $library $name
             if (-not (Test-Path -LiteralPath $file)) {
-                throw "Нет полного текста: output/literature/$name. Выполните: python tools/sources/lit.py fetch"
+                throw "Нет полного текста: $file. Выполните: lit fetch"
             }
-            Copy-Record ('output/literature/' + $name)
+            Copy-Record ('literature/' + $name) $file
         }
         if ($paper.filename) {
             # У сканированного PDF нет текстового слоя и потому нет файла .txt рядом.
             $text = [System.IO.Path]::ChangeExtension($paper.filename, '.txt')
-            if (Test-Path -LiteralPath (Join-Path $projectRoot ('output/literature/' + $text))) {
-                Copy-Record ('output/literature/' + $text)
+            $layer = Join-Path $library (Join-Path '.lit/text' $text)
+            if (Test-Path -LiteralPath $layer) {
+                Copy-Record ('literature/' + $text) $layer
             }
         }
     }

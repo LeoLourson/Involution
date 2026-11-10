@@ -8,7 +8,7 @@ applies_to: [C3]
 
 **Авторы:** Asylzat Kopzhassarova, Abdizhakhan Sarsenbi. **Версия:** Abstract and Applied
 Analysis, 2012, Article 576843, 6 с. [DOI](https://doi.org/10.1155/2012/576843),
-[PDF](../output/literature/Kopzhassarova-2012.pdf).
+PDF `Kopzhassarova, Sarsenbi 2012 - Basis Properties of Eigenfunctions of Second-Order Differential Operators with Involution.pdf`.
 
 **Теорема 4.1, с. 4; задача (3.2), (4.1), с. 3–4.** Постоянный параметр $\alpha$,
 $\alpha^2\ne1$, отражённая вторая производная, условия Дирихле. Вывод: явно выписанные

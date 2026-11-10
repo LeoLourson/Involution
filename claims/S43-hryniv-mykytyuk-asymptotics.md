@@ -2,6 +2,7 @@
 id: S43
 title: Асимптотика собственных значений при комплексном потенциале
 status: verified
+verified: 2026-10-13
 source: S43, теорема 1.2 и следствие 1.3, с. 4; замечание 6.3, с. 20
 applies_to: [I19]
 checked_by: source-verifier 2026-10-13
@@ -9,8 +10,8 @@ checked_by: source-verifier 2026-10-13
 
 **Авторы:** R. O. Hryniv, Ya. V. Mykytyuk. **Версия:** arXiv:math/0407252v2, «Eigenvalue
 asymptotics for Sturm–Liouville operators with singular potentials».
-[PDF](../output/literature/math-0407252v2.pdf),
-[LaTeX](../output/literature/math-0407252v2.tex). Страницы — по PDF arXiv v2 (25 с.).
+PDF `Hryniv, Mykytyuk 2004 - Eigenvalue asymptotics for Sturm--Liouville operators with singular potentials.pdf`,
+LaTeX `Hryniv, Mykytyuk 2004 - Eigenvalue asymptotics for Sturm--Liouville operators with singular potentials.tex`. Страницы — по PDF arXiv v2 (25 с.).
 
 **Определения, с. 1–2.** $q$ — комплексное распределение из $W^{\alpha-1}_2(0,1)$,
 $\alpha\in[0,1]$; $\sigma\in W^\alpha_2(0,1)$ — первообразная $q$;

@@ -2,6 +2,7 @@
 id: S3
 title: Обзор теории подчинённых возмущений
 status: verified
+verified: 2026-10-20
 source: S3, теорема 4.7, с. 129; теорема 6.6, с. 140; определение 4.5 и замечание 4.6, с. 129; замечание 6.7, с. 148; (6.1)–(6.2), с. 135–136; (5.1)–(5.3), с. 131; теорема 5.1, с. 132
 applies_to: [C6, C17, C19, C21, I12, I16, I18, I19]
 checked_by: [source-verifier 2026-10-13, source-verifier 2026-10-20]
@@ -9,8 +10,8 @@ checked_by: [source-verifier 2026-10-13, source-verifier 2026-10-20]
 
 **Автор:** А. А. Шкаликов. **Версия:** Успехи матем. наук 71:5(431) (2016), 113–174;
 DOI 10.4213/rm9740. [MathNet](https://www.mathnet.ru/rm9740),
-[PDF](../output/literature/Shkalikov-rm9740.pdf),
-[распознанный LaTeX](../output/literature/Shkalikov-rm9740.tex). Страницы журнальные;
+PDF `Shkalikov 2016 - Vozmushcheniya samosopryazhennykh i normalnykh operatorov s diskretnym spektrom.pdf`,
+распознанный LaTeX `Shkalikov 2016 - Vozmushcheniya samosopryazhennykh i normalnykh operatorov s diskretnym spektrom.tex`. Страницы журнальные;
 страница PDF равна журнальной минус 112. Проверка 10.10.2026.
 
 **Определения.** Стоячее условие § 3, с. 122: невозмущённый оператор $T$ нормален и

@@ -8,8 +8,8 @@
       }
     },
     "lit": {
-      "command": "python",
-      "args": ["tools/sources/lit_mcp.py"]
+      "command": "uvx",
+      "args": ["--from", "git+https://github.com/LeoLourson/MathPaperLib", "mathpaperlib", "mcp"]
     }
   }
 }

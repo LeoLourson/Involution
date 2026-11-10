@@ -8,7 +8,7 @@ applies_to: [C13]
 
 **Автор:** Dmitry M. Polyakov. **Версия:** Tamkang Journal of Mathematics 54(4), 339–351
 (2023), online 29.07.2022. [DOI](https://doi.org/10.5556/j.tkjm.54.2023.4899),
-[PDF](../output/literature/Polyakov-Bari.pdf).
+PDF `Polyakov 2023 - On the Bari basis property for even-order differential operators with involution.pdf`.
 
 **Теорема 1.1, PDF с. 2, журнальная с. 340.** Отражённая производная порядка $2k$, $k>1$,
 суммируемые с квадратом коэффициенты младших членов, периодические или антипериодические
