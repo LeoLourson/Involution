@@ -36,7 +36,7 @@
 | `idea` | `claims/I*.md` | человек | идея по открытому узлу |
 | `card` | `claims/S*.md` | человек | карточка чужого результата |
 | `paper` | `paper/*.tex` | человек | изложение: `paper/review.tex`, экспозиции `paper/exposition.tex` и `paper/exposition-ИМЯ.tex` |
-| `collection` | `sources/registry.json`, `sources/README.md` | человек | опись коллекции источников |
+| `collection` | `sources/registry.json`, `sources/README.md`, `project.toml` | человек | опись коллекции источников |
 | `library` | `Involution/<Слой>/*.lean`, `Involution.lean` | человек | Lean: слои теории |
 | `tool` | `tools/**` | человек | скрипты процесса |
 | `task` | `tasks/**` | человек | обмен с внешним исполнителем |
@@ -53,13 +53,13 @@
 | --- | --- | --- | --- |
 | `index` | `index.md` | `tools/state/build_index.py` | `python tools/state/build_index.py --check` |
 | `plan` | `blueprint.md` | `tools/state/build_index.py` | там же |
-| `catalog` | `sources/catalog.md` | `tools/sources/lit.py catalog` | `sources/registry.json` |
+| `catalog` | `sources/catalog.md` | `lit catalog` | `sources/registry.json` |
 | `statusfrag` | `paper/generated/status.tex` | `tools/state/gen_status.py` | `python tools/state/gen_status.py --check` |
 | `ledger` | `output/generated/Axioms.lean` | `tools/state/gen_ledger.py` | `tools/check/check.ps1` |
 | `skills` | `.dsh/skills/**` | `tools/host/harness.py prepare` | `python tools/host/harness.py check` |
 | `patch` | `output/harness/**` | там же | там же |
 | `snapshot` | `output/snapshot/**` | `tools/host/prepare-input.ps1` | тот же скрипт, повторный прогон |
-| `buildout` | `output/build/**`, `output/review.pdf`, `output/literature/**` | сборка и `lit.py` | — |
+| `buildout` | `output/build/**`, `output/review.pdf`, `output/literature/**` | сборка; прежняя папка текстов старого `lit.py` | — |
 | `migration` | `output/migration/**` | разовая реорганизация | — |
 
 `output/` — цех: внутри допустима любая служебная раскладка. В Git не входит.

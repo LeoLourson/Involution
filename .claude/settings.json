@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python tools\\sources\\lit.py *)",
+      "Bash(lit *)",
+      "Bash(uvx --from git+https://github.com/LeoLourson/MathPaperLib lit *)",
       "Bash(python tools\\host\\harness.py *)",
       "Bash(python tools\\state\\*)",
       "Bash(python tools\\check\\*)",

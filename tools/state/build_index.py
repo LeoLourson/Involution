@@ -352,11 +352,11 @@ def render_blueprint(data: dict) -> str:
         lines.append(f"Опись: `{data['registry_rel']}`.")
         lines.append("")
         lines.append(f"* Кодов: {len(stats['codes'])} (уникальных: {len(stats['unique'])}).")
-        lines.append(f"* С полным текстом локально (`output/literature/`): {len(stats['full'])}.")
+        lines.append(f"* С полным текстом в библиотеке `lit`: {len(stats['full'])}.")
         lines.append(f"* Полного текста нет: {len(stats['no_text'])}" + (f" — {', '.join(stats['no_text'])}." if stats["no_text"] else "."))
         if stats["missing_files"]:
             listed = "; ".join(f"{code}: {', '.join(files)}" for code, files in stats["missing_files"])
-            lines.append(f"* Указан файл, которого нет: {listed}. Восстанавливает `tools/sources/lit.py fetch`.")
+            lines.append(f"* Указан файл, которого нет: {listed}. Восстанавливает `lit fetch`.")
         if stats["no_code"]:
             lines.append(f"* Записей без кода: {len(stats['no_code'])}.")
         if data["registry_note"]:

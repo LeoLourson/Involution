@@ -16,7 +16,9 @@
 from __future__ import annotations
 
 import json
+import os
 import re
+import tomllib
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -364,9 +366,28 @@ def load_registry(root: Path):
     return [], "", "файла реестра нет: ожидается sources/registry.json"
 
 
+def library_dir(root: Path) -> Path:
+    """Библиотека MathPaperLib, где лежат полные тексты.
+
+    Порядок тот же, что у `lit`: `MATHPAPERLIB_HOME`, затем `[sources] library` из
+    `project.toml` (путь от корня проекта), иначе `~/Literature`.
+    """
+    if os.environ.get("MATHPAPERLIB_HOME"):
+        return Path(os.environ["MATHPAPERLIB_HOME"]).expanduser()
+    toml = root / "project.toml"
+    if toml.is_file():
+        try:
+            given = tomllib.loads(toml.read_text(encoding="utf-8")).get("sources", {}).get("library")
+        except (OSError, UnicodeDecodeError, tomllib.TOMLDecodeError):
+            given = None
+        if given:
+            return (root / given).resolve()
+    return Path.home() / "Literature"
+
+
 def registry_stats(root: Path, entries: list):
-    """Сколько кодов и у скольких есть полный текст локально."""
-    lit = root / "output" / "literature"
+    """Сколько кодов и у скольких есть полный текст в библиотеке."""
+    lit = library_dir(root)
     codes, full, no_text, missing_files, no_code = [], [], [], [], []
     for entry in entries:
         if not isinstance(entry, dict):

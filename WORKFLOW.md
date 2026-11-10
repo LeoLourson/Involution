@@ -50,7 +50,7 @@ flowchart TD
 
     subgraph SRC["/sources"]
         direction TB
-        LS["literature-scout<br/>→ отчёт"] --> ADD["lit.py add<br/>→ registry.json"]
+        LS["literature-scout<br/>→ отчёт"] --> ADD["lit add<br/>→ registry.json"]
         ADD --> TR["/transcribe<br/>latex-transcriber"]
         TR --> CARD["карточка S*"] --> SV["source-verifier<br/>→ «Сверка» в S*"]
     end
@@ -95,7 +95,7 @@ flowchart LR
     C --> GS["gen_status.py"] --> ST
     C -- "final: true" --> GL["gen_ledger.py"] --> AX
     L --> GL
-    R --> LIT["lit.py catalog"] --> CT
+    R --> LIT["lit catalog"] --> CT
     ST --> REV["paper/review.tex"]
 ```
 

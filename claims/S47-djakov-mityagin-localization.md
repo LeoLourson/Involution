@@ -2,6 +2,7 @@
 id: S47
 title: Локализация спектра Дирихле при комплексном потенциале
 status: verified
+verified: 2026-10-25
 source: S47, теорема 21, с. 34, формулы (5.55), (5.56)
 applies_to: [I19, C23]
 checked_by: [source-verifier 2026-10-13, source-verifier 2026-10-25]
@@ -9,8 +10,8 @@ checked_by: [source-verifier 2026-10-13, source-verifier 2026-10-25]
 
 **Авторы:** P. Djakov, B. Mityagin. **Версия:** arXiv:0710.0237v1, «Fourier method for one
 dimensional Schrödinger operators with singular periodic potentials».
-[PDF](../output/literature/0710.0237v1.pdf),
-[LaTeX](../output/literature/0710.0237v1.tex). Страницы — по PDF arXiv v1 (39 с.).
+PDF `Djakov, Mityagin 2007 - Fourier method for one dimensional Schrodinger operators with singular periodic potentials.pdf`,
+LaTeX `Djakov, Mityagin 2007 - Fourier method for one dimensional Schrodinger operators with singular periodic potentials.tex`. Страницы — по PDF arXiv v1 (39 с.).
 
 **Определения.** Потенциал $v\in H^{-1}_{loc}(\mathbb R)$ комплексный, $\pi$-периодический,
 $v=C+Q'$ с $\pi$-периодической $Q\in L^2_{loc}(\mathbb R)$ ((2.11), с. 5) и нормировкой
@@ -66,7 +67,7 @@ $Q\in W^1_2$, поэтому $y'-Qy\in W^1_1$ равносильно $y'\in W^1_
 
 ### Сверка (13.10.2026)
 
-Сверка шла по изображениям страниц файла `output/literature/0710.0237v1.pdf` (версия
+Сверка шла по изображениям страниц файла `Djakov, Mityagin 2007 - Fourier method for one dimensional Schrodinger operators with singular periodic potentials.pdf` (версия
 arXiv:0710.0237v1, как в реестре): 1–5, 12, 15, 18, 21, 22, 29–32, 34, 35. Печатные номера
 страниц совпадают с номерами страниц файла.
 
@@ -161,7 +162,7 @@ $\#(Sp(L_{Dir})\cap R_N)=N$. Вторая часть (5.56), по одному �
 ### Сверка (2026-10-25)
 
 Повторная сверка всего текста карточки, включая правки «После сверки (13.10.2026)». Сверка
-шла по изображениям страниц файла `output/literature/0710.0237v1.pdf` (arXiv:0710.0237v1,
+шла по изображениям страниц файла `Djakov, Mityagin 2007 - Fourier method for one dimensional Schrodinger operators with singular periodic potentials.pdf` (arXiv:0710.0237v1,
 как в реестре): 5, 12, 18, 21, 29, 31, 34, 35. Печатные номера совпадают с номерами страниц
 файла.
 

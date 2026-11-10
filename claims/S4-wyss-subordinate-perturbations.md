@@ -7,7 +7,7 @@ applies_to: [C6, C7, C16]
 ---
 
 **Автор:** Christian Wyss. **Версия:** arXiv:0906.2631v1.
-[Источник](https://arxiv.org/abs/0906.2631v1), [PDF](../output/literature/Wyss-0906.2631v1.pdf).
+[Источник](https://arxiv.org/abs/0906.2631v1), PDF `Wyss 2009 - Riesz Bases for p-Subordinate Perturbations of Normal Operators.pdf`.
 
 **Теорема 6.1, с. 21.** Гипотезы: $G$ — нормальный оператор с компактной резольвентой,
 спектр на конечном числе лучей; $S$ подчинён $G$ с показателем $0\le p<1$;
